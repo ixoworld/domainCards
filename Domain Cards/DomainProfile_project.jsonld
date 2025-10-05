@@ -1,0 +1,320 @@
+{
+  "$schema": "../specs/ixo-domain-pod.schema.json",
+  "@context": [
+    "https://w3id.org/ixo/context/v1",
+    {
+      "schema": "https://schema.org",
+      "ixo": "https://w3id.org/ixo/vocab/v1",
+      "prov": "http://www.w3.org/ns/prov#",
+      "po": "http://www.projectontology.org/",
+      "id": "@id",
+      "type": "@type",
+      "@protected": true,
+      "@version": 1.1
+    }
+  ],
+  "id": "<<<did:ixo:projectCard>>>",
+  "type": [
+    "ixo:entity",
+    "ixo:project",
+    "ixo:<<<project type>>>"
+  ],
+  "name": "<<<Domain Name>>>",
+  "alternateName": [
+    "<<<Alias>>>"
+  ],
+  "description": "<<<One-Paragraph Canonical Description>>>",
+  "url": "https://<<<Domain URL>>>",
+  "sameAs": [
+    "https://twitter.com/<<<Twitter Handle>>>",
+    "https://github.com/<<<GitHub Organization>>>"
+  ],
+  "identifier": [
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "ixo:DID",
+      "name": "Decentralized Identifier",
+      "value": "<<<did:ixo:entity123>>>",
+      "url": "https://explorer.ixo.world/entity/<<<did:ixo:entity123>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "grantID",
+      "name": "Grant Reference",
+      "value": "<<<Grant Code>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "UNSDG",
+      "name": "Primary SDG Alignment",
+      "value": "<<<SDG Code>>>",
+      "description": "<<<SDG Goal Description>>>"
+    }
+  ],
+  "owner": {
+    "@type": "ixo:Entity",
+    "@id": "<<<did:ixo:owner123>>>"
+  },
+  "logo": {
+    "@type": "schema:ImageObject",
+    "@id": "https://<<<Logo URL>>>"
+  },
+  "image": [
+    {
+      "@type": "schema:ImageObject",
+      "@id": "https://<<<Hero Image URL>>>"
+    }
+  ],
+  "areaServed": {
+    "@type": "schema:AdministrativeArea",
+    "name": "<<<Area Name>>>",
+    "description": "<<<Area Description>>>"
+  },
+  "contactPoint": [
+    {
+      "@type": "schema:ContactPoint",
+      "contactType": "<<<Contact Type>>>",
+      "email": "<<<Contact Email>>>",
+      "availableLanguage": [
+        "<<<Language Code 1>>>",
+        "<<<Language Code 2>>>",
+        "<<<Language Code 3>>>"
+      ]
+    }
+  ],
+  "keywords": [
+    "<<<Keyword 1>>>",
+    "<<<Keyword 2>>>",
+    "<<<Keyword 3>>>"
+  ],
+  "knowsAbout": [
+    "<<<Topic 1>>>",
+    "<<<Topic 2>>>",
+    "<<<Topic 3>>>"
+  ],
+  "po:hasMission": "<<<High-level mission or purpose statement>>>",
+  "po:hasObjective": [
+    "<<<Objective 1>>>",
+    "<<<Objective 2>>>",
+    "<<<Objective 3>>>"
+  ],
+  "po:hasActivity": [
+    {
+      "@type": "po:Activity",
+      "po:activityName": "<<<Activity Name 1>>>",
+      "po:activityDescription": "<<<Activity Description 1>>>",
+      "schema:startDate": "<<<Activity Start Date 1>>>",
+      "schema:endDate": "<<<Activity End Date 1>>>"
+    },
+    {
+      "@type": "po:Activity",
+      "po:activityName": "<<<Activity Name 2>>>",
+      "po:activityDescription": "<<<Activity Description 2>>>"
+    }
+  ],
+  "po:hasDeliverable": [
+    {
+      "@type": "po:Deliverable",
+      "po:deliverableName": "<<<Deliverable Name 1>>>",
+      "po:deliverableDescription": "<<<Deliverable Description 1>>>",
+      "schema:url": "ipfs://<<<CID-deliverable1>>>"
+    }
+  ],
+  "po:produces": [
+    {
+      "@type": "po:Result",
+      "po:resultDescription": "<<<Result or measurable output>>>"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "ixo:Asset",
+      "@id": "<<<did:ixo:asset1>>>",
+      "name": "<<<Asset Name 1>>>",
+      "description": "<<<Asset Description 1>>>"
+    },
+    {
+      "@type": "ixo:Project",
+      "@id": "<<<did:ixo:project2>>>",
+      "name": "<<<Project Name 2>>>",
+      "description": "<<<Project Description 2>>>"
+    },
+    {
+      "@type": "ixo:POD",
+      "@id": "<<<did:ixo:pod1>>>",
+      "name": "<<<Pod Name>>>",
+      "description": "<<<Pod Description>>>"
+    },
+    {
+      "@type": "schema:WebApplication",
+      "@id": "https://<<<Matrix Space URL>>>",
+      "name": "<<<Matrix Space Name>>>"
+    },
+    {
+      "@type": "schema:SoftwareSourceCode",
+      "@id": "https://<<<GitHub Repository URL>>>",
+      "name": "<<<GitHub Repository Name>>>"
+    },
+    {
+      "@type": "schema:CreativeWork",
+      "@id": "https://<<<Notion Workspace URL>>>",
+      "name": "<<<Notion Workspace Name>>>"
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://<<<Whitepaper URL>>>",
+      "name": "<<<Whitepaper Title>>>"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "@id": "<<<uri>>>",
+        "name": "<<<App Name 1>>>",
+        "applicationCategory": "<<<Application Category 1>>>",
+        "description": "<<<App Description 1>>>"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "@id": "<<<uri>>>",
+        "name": "<<<Service Name>>>",
+        "description": "<<<Service Description>>>"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Device",
+        "@id": "<<<uri>>>",
+        "name": "<<<Device Name>>>",
+        "description": "<<<Device Description>>>"
+      }
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Organization URL 1>>>",
+      "name": "<<<Organization Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Role Name 1>>>",
+        "startDate": "<<<Start Date 1>>>"
+      }
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Affiliation URL 1>>>",
+      "name": "<<<Affiliation Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Affiliation Role 1>>>",
+        "startDate": "<<<Start Date 3>>>"
+      }
+    }
+  ],
+  "prov:wasAssociatedWith": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Partner URL 1>>>",
+      "name": "<<<Partner Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Partner Role 1>>>",
+        "startDate": "<<<Start Date 5>>>"
+      }
+    }
+  ],
+  "schema:funding": {
+    "@type": "schema:Grant",
+    "funder": {
+      "@type": "schema:Organization",
+      "@id": "did:ixo:org:<<<funderID>>>",
+      "name": "<<<Funder Name>>>"
+    },
+    "amount": {
+      "@type": "schema:MonetaryAmount",
+      "currency": "<<<Currency Code>>>",
+      "value": "<<<Budget Amount>>>"
+    },
+    "description": "<<<Funding purpose and scope>>>"
+  },
+  "event": [
+    {
+      "@type": "schema:Event",
+      "name": "<<<Event Name 1>>>",
+      "startDate": "<<<Start Date>>>",
+      "endDate": "<<<End Date>>>",
+      "description": "<<<Event Description>>>",
+      "location": {
+        "@type": "schema:Place",
+        "name": "<<<Location Name>>>"
+      }
+    },
+    {
+      "@type": "schema:EventSeries",
+      "name": "<<<Event Series Name>>>",
+      "description": "<<<Event Series Description>>>",
+      "event": [
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 1>>>",
+          "startDate": "<<<Sub-Event Date 1>>>",
+          "description": "<<<Sub-Event Description 1>>>"
+        },
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 2>>>",
+          "startDate": "<<<Sub-Event Date 2>>>",
+          "description": "<<<Sub-Event Description 2>>>"
+        },
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 3>>>",
+          "startDate": "<<<Sub-Event Date 3>>>",
+          "description": "<<<Sub-Event Description 3>>>"
+        }
+      ]
+    }
+  ],
+  "ixo:researchProfile": {
+    "@type": "ixo:ResearchProfile",
+    "ixo:seedQueries": [
+      "<<<Seed Query 1>>>",
+      "<<<Seed Query 2>>>"
+    ],
+    "schema:citation": [
+      "<<<Citation URL 1>>>",
+      "<<<Citation URL 2>>>"
+    ],
+    "ixo:curationRules": [
+      "<<<Curation Rule 1>>>",
+      "<<<Curation Rule 2>>>"
+    ],
+    "ixo:embedding": {
+      "@type": "ixo:Embedding",
+      "model": "<<<Model Name>>>",
+      "vector": [
+        "<<<Vector Data>>>"
+      ],
+      "archetypeVectors": [
+        {
+          "label": "<<<Archetype Label>>>",
+          "vector": [
+            "<<<Archetype Vector Data>>>"
+          ]
+        }
+      ]
+    },
+    "schema:dateModified": "<<<Date Modified>>>"
+  }
+}

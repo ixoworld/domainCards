@@ -1,0 +1,298 @@
+{
+  "$schema": "../specs/ixo-domain-pod.schema.json",
+  "@context": [
+    "https://w3id.org/ixo/context/v1",
+    {
+      "schema": "https://schema.org",
+      "ixo": "https://w3id.org/ixo/vocab/v1",
+      "prov": "http://www.w3.org/ns/prov#",
+      "id": "@id",
+      "type": "@type",
+      "@protected": true,
+      "@version": 1.1
+    }
+  ],
+  "id": "<<<did:ixo:podCard>>>",
+  "type": [
+    "ixo:entity",
+    "ixo:pod",
+    "ixo:<<<pod type>>>"
+  ],
+  "name": "<<<Domain Name>>>",
+  "alternateName": [
+    "<<<Alias>>>"
+  ],
+  "description": "<<<One-Paragraph Canonical Description>>>",
+  "url": "https://<<<Domain URL>>>",
+  "sameAs": [
+    "https://twitter.com/<<<Twitter Handle>>>",
+    "https://github.com/<<<GitHub Organization>>>"
+  ],
+  "identifier": [
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "ixo:DID",
+      "name": "Decentralized Identifier",
+      "value": "<<<did:ixo:entity123>>>",
+      "url": "https://explorer.ixo.world/entity/<<<did:ixo:entity123>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "LEI",
+      "name": "Legal Entity Identifier",
+      "value": "<<<Legal Entity Identifier>>>",
+      "url": "https://search.gleif.org/#/record/<<<Legal Entity Identifier>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "Handelsregister-Nummer",
+      "name": "Liechtenstein Commercial Register ID",
+      "value": "<<<Commercial Register ID>>>",
+      "url": "https://www.oera.li/cr-portal/auszug/<<<Commercial Register ID>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "VAT",
+      "name": "Value Added Tax ID",
+      "value": "<<<VAT ID>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "ISIC",
+      "name": "Industry Classification (ISIC Rev.4)",
+      "value": "<<<ISIC Code>>>",
+      "description": "<<<Industry Description>>>"
+    },
+    {
+      "@type": "schema:PropertyValue",
+      "propertyID": "RDF:org:classification",
+      "name": "Legal Form",
+      "value": "<<<Legal Form>>>",
+      "description": "<<<Legal Form Description>>>"
+    }
+  ],
+  "owner": {
+    "@type": "ixo:Entity",
+    "@id": "<<<did:ixo:owner123>>>"
+  },
+  "logo": {
+    "@type": "schema:ImageObject",
+    "@id": "https://<<<Logo URL>>>"
+  },
+  "image": [
+    {
+      "@type": "schema:ImageObject",
+      "@id": "https://<<<Hero Image URL>>>"
+    }
+  ],
+  "areaServed": {
+    "@type": "schema:AdministrativeArea",
+    "name": "<<<Area Name>>>",
+    "description": "<<<Area Description>>>"
+  },
+  "postalAddress": {
+    "@type": "schema:PostalAddress",
+    "streetAddress": "<<<Street Address>>>",
+    "addressLocality": "<<<City>>>",
+    "addressRegion": "<<<Region>>>",
+    "postalCode": "<<<Postal Code>>>",
+    "postOfficeBoxNumber": "<<<PO Box Number>>>",
+    "addressCountry": "<<<Country Code>>>"
+  },
+  "contactPoint": [
+    {
+      "@type": "schema:ContactPoint",
+      "contactType": "<<<Contact Type>>>",
+      "email": "<<<Contact Email>>>",
+      "availableLanguage": [
+        "<<<Language Code 1>>>",
+        "<<<Language Code 2>>>",
+        "<<<Language Code 3>>>"
+      ]
+    }
+  ],
+  "keywords": [
+    "<<<Keyword 1>>>",
+    "<<<Keyword 2>>>",
+    "<<<Keyword 3>>>"
+  ],
+  "knowsAbout": [
+    "<<<Topic 1>>>",
+    "<<<Topic 2>>>",
+    "<<<Topic 3>>>"
+  ],
+  "hasPart": [
+    {
+      "@type": "ixo:DAO",
+      "@id": "<<<did:ixo:dao1>>>",
+      "name": "<<<DAO Name 1>>>",
+      "description": "<<<Project Description 1>>>"
+    },
+    {
+      "@type": "ixo:Project",
+      "@id": "<<<did:ixo:project2>>>",
+      "name": "<<<Project Name 2>>>",
+      "description": "<<<Project Description 2>>>"
+    },
+    {
+      "@type": "ixo:Group",
+      "@id": "<<<did:ixo:group3>>>",
+      "name": "<<<Group Name 3>>>",
+      "description": "<<<Group Description 3>>>"
+    },
+    {
+      "@type": "ixo:POD",
+      "@id": "<<<did:ixo:pod1>>>",
+      "name": "<<<Pod Name>>>",
+      "description": "<<<Pod Description>>>"
+    },
+    {
+      "@type": "schema:WebApplication",
+      "@id": "https://<<<Matrix Space URL>>>",
+      "name": "<<<Matrix Space Name>>>"
+    },
+    {
+      "@type": "schema:SoftwareSourceCode",
+      "@id": "https://<<<GitHub Repository URL>>>",
+      "name": "<<<GitHub Repository Name>>>"
+    },
+    {
+      "@type": "schema:CreativeWork",
+      "@id": "https://<<<Notion Workspace URL>>>",
+      "name": "<<<Notion Workspace Name>>>"
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://<<<Whitepaper URL>>>",
+      "name": "<<<Whitepaper Title>>>"
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "@id": "<<<uri>>>",
+        "name": "<<<App Name 1>>>",
+        "applicationCategory": "<<<Application Category 1>>>",
+        "description": "<<<App Description 1>>>"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "@id": "<<<uri>>>",
+        "name": "<<<Service Name 1>>>",
+        "description": "<<<Service Description 3>>>"
+      }
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Organization URL 1>>>",
+      "name": "<<<Organization Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Role Name 1>>>",
+        "startDate": "<<<Start Date 1>>>"
+      }
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Affiliation URL 1>>>",
+      "name": "<<<Affiliation Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Affiliation Role 1>>>",
+        "startDate": "<<<Start Date 3>>>"
+      }
+    }
+  ],
+  "prov:wasAssociatedWith": [
+    {
+      "@type": "schema:Organization",
+      "@id": "https://<<<Partner URL 1>>>",
+      "name": "<<<Partner Name 1>>>",
+      "role": {
+        "@type": "schema:Role",
+        "roleName": "<<<Partner Role 1>>>",
+        "startDate": "<<<Start Date 5>>>"
+      }
+    }
+  ],
+  "event": [
+    {
+      "@type": "schema:Event",
+      "name": "<<<Event Name 1>>>",
+      "startDate": "<<<Start Date>>>",
+      "endDate": "<<<End Date>>>",
+      "description": "<<<Event Description>>>",
+      "location": {
+        "@type": "schema:Place",
+        "name": "<<<Location Name>>>"
+      }
+    },
+    {
+      "@type": "schema:EventSeries",
+      "name": "<<<Event Series Name>>>",
+      "description": "<<<Event Series Description>>>",
+      "event": [
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 1>>>",
+          "startDate": "<<<Sub-Event Date 1>>>",
+          "description": "<<<Sub-Event Description 1>>>"
+        },
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 2>>>",
+          "startDate": "<<<Sub-Event Date 2>>>",
+          "description": "<<<Sub-Event Description 2>>>"
+        },
+        {
+          "@type": "schema:Event",
+          "name": "<<<Sub-Event Name 3>>>",
+          "startDate": "<<<Sub-Event Date 3>>>",
+          "description": "<<<Sub-Event Description 3>>>"
+        }
+      ]
+    }
+  ],
+  "ixo:researchProfile": {
+    "@type": "ixo:ResearchProfile",
+    "ixo:seedQueries": [
+      "<<<Seed Query 1>>>",
+      "<<<Seed Query 2>>>"
+    ],
+    "schema:citation": [
+      "<<<Citation URL 1>>>",
+      "<<<Citation URL 2>>>"
+    ],
+    "ixo:curationRules": [
+      "<<<Curation Rule 1>>>",
+      "<<<Curation Rule 2>>>"
+    ],
+    "ixo:embedding": {
+      "@type": "ixo:Embedding",
+      "model": "<<<Model Name>>>",
+      "vector": [
+        "<<<Vector Data>>>"
+      ],
+      "archetypeVectors": [
+        {
+          "label": "<<<Archetype Label>>>",
+          "vector": [
+            "<<<Archetype Vector Data>>>"
+          ]
+        }
+      ]
+    },
+    "schema:dateModified": "<<<Date Modified>>>"
+  }
+}
