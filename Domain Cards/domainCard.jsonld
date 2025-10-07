@@ -1,0 +1,316 @@
+{
+  "$schema": "../specs/ixo-domain-dao.schema.json",
+  "@context": [
+    "https://w3id.org/ixo/context/v1",
+    {
+      "schema": "https://schema.org",
+      "ixo": "https://w3id.org/ixo/vocab/v1",
+      "prov": "http://www.w3.org/ns/prov#",
+      "proj": "https://linked.data.gov.au/def/project#",
+      "vc": "https://www.w3.org/2018/credentials/v1",
+      "id": "@id",
+      "type": "@type",
+      "@protected": true,
+      "@version": 1.1
+    }
+  "@id": "did:ixo:<<<Domain DID>>>#dmn",
+  "@type": ["vc:VerifiableCredential", "ixo:DomainCard"],
+  "description": "DomainCard schema, designed for semantic clarity and AI readability.",
+  "issuer": {
+    "@id": "did:ixo:issuer:<<<Issuer DID>>>",
+    "name": "<<<Issuer Name>>>",
+    "description": "Entity issuing or maintaining this domain credential."
+  },
+  "issuanceDate": "<<<Issuance Date>>>",
+  "expirationDate": "<<<Expiration Date>>>",
+  "credentialSubject": {
+    "description": "The subject of the verifiable credential — the IXO domain entity being described.",
+    "entity": {
+      "@type": "ixo:EntityIdentity",
+      "description": "Represents the digital identity, metadata, and contextual links defining this domain entity.",
+      "identifier": [
+        {
+          "@type": "ixo:entityId",
+          "name": "Decentralized Identifier",
+          "value": "<<<Entity DID>>>",
+          "description": "Globally unique DID identifier representing the entity."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "propertyID": "ixo:DID",
+          "name": "Decentralized Identifier",
+          "value": "<<<Entity DID>>>",
+          "url": "https://explorer.ixo.world/entity/<<<Entity DID>>>",
+          "description": "Canonical DID reference URL in the IXO Explorer."
+        }
+      ],
+      "name": "<<<Domain Name>>>",
+      "description_name": "Human-readable canonical name of the domain.",
+      "alternateName": ["<<<Alternate Name>>>"],
+      "description_alternateName": "Alternative or short forms of the domain name.",
+      "url": ["https://<<<Domain URL>>>"],
+      "description_url": "Primary domain web endpoint or resource link.",
+      "sameAs": [
+        "https://twitter.com/<<<Handle>>>",
+        "https://github.com/<<<Organization>>>"
+      ],
+      "description_sameAs": "Links to equivalent or related entities on external platforms.",
+      "logo": {
+        "@type": "schema:ImageObject",
+        "@id": "https://<<<Logo URL>>>",
+        "contentUrl": "https://<<<Logo URL>>>",
+        "description": "Logo image representing this domain."
+      },
+      "image": [
+        {
+          "@type": "schema:ImageObject",
+          "@id": "https://<<<Image URL>>>",
+          "contentUrl": "https://<<<Image URL>>>",
+          "description": "Hero image or visual banner representing the domain."
+        }
+      ],
+      "keywords": ["<<<Keyword 1>>>", "<<<Keyword 2>>>", "<<<Keyword 3>>>"],
+      "description_keywords": "Keywords that describe the main focus areas or topics of this domain.",
+      "knowsAbout": ["<<<Topic 1>>>", "<<<Topic 2>>>"],
+      "description_knowsAbout": "Concepts or thematic areas this domain is knowledgeable in or connected to.",
+      "location": {
+        "@type": "schema:Place",
+        "description": "Geographical or operational location of the domain organization.",
+        "areaServed": {
+          "@type": "schema:AdministrativeArea",
+          "name": "<<<Area Served>>>",
+          "description": "Primary jurisdiction or area served by this domain."
+        },
+        "postalAddress": {
+          "@type": "schema:PostalAddress",
+          "streetAddress": "<<<Street Address>>>",
+          "addressLocality": "<<<City>>>",
+          "addressRegion": "<<<Region>>>",
+          "postalCode": "<<<Postal Code>>>",
+          "addressCountry": "<<<Country Code>>>",
+          "description": "Full postal address of the domain organization or registry office."
+        },
+        "contactPoint": [
+          {
+            "@type": "schema:ContactPoint",
+            "contactType": "<<<Contact Type>>>",
+            "email": "<<<Contact Email>>>",
+            "telephone": "<<<Contact Phone>>>",
+            "availableLanguage": ["<<<Language 1>>>", "<<<Language 2>>>"],
+            "description": "Primary contact details for the domain (support, technical, or business)."
+          }
+        ]
+      },
+      "program": {
+        "@type": "proj:Program",
+        "description": "Represents initiatives or structured programs undertaken by this domain.",
+        "proj:hasGoal": "<<<Program Goal>>>",
+        "proj:hasObjective": [
+          "<<<Program Objective 1>>>",
+          "<<<Program Objective 2>>>",
+          "<<<Program Objective 3>>>"
+        ],
+        "proj:hasActivity": [
+          {
+            "@type": "prov:Activity",
+            "proj:activityName": "<<<Activity Name>>>",
+            "proj:activityDescription": "<<<Detailed Activity Description>>>",
+            "proj:activityStartDate": "<<<Start Date>>>",
+            "proj:activityEndDate": "<<<End Date>>>",
+            "proj:activityAgent": {
+              "@type": "schema:Organization",
+              "name": "<<<Responsible Organization>>>"
+            },
+            "description": "Individual project or operational activity related to the domain."
+          }
+        ],
+        "proj:hasDeliverable": [
+          {
+            "@type": "proj:Deliverable",
+            "proj:deliverableName": "<<<Deliverable Name>>>",
+            "proj:deliverableDescription": "<<<Deliverable Description>>>",
+            "url": "https://<<<Deliverable URL>>>",
+            "proj:deliverableDueDate": "<<<Due Date>>>",
+            "proj:deliverableStatus": "<<<Status>>>",
+            "description": "Expected or achieved outputs of the program (deliverables)."
+          }
+        ],
+        "proj:produces": [
+          {
+            "@type": "proj:Result",
+            "proj:resultDescription": "<<<Result Description>>>",
+            "proj:resultMetric": "<<<Metric or KPI>>>",
+            "description": "Measured or observable outcome of program activities."
+          }
+        ]
+      },
+      "composition": {
+        "@type": "schema:Collection",
+        "description": "Composite elements forming the domain, such as entities, projects, media, or datasets.",
+        "schema:hasPart": [
+          {
+            "@type": "<<<Type>>>",
+            "@id": "<<<DID or URL>>>",
+            "name": "<<<Name>>>",
+            "description": "Describe the role of this entity in the domain (e.g., DAO, project, dataset, document, or media asset).",
+            "url": "https://<<<URL>>>",
+            "creator": {
+              "@type": "schema:Organization",
+              "name": "<<<Creator Name>>>"
+            },
+            "license": "<<<License Type>>>"
+          }
+        ],
+        "subjectOf": [
+          {
+            "@type": "schema:CreativeWork",
+            "name": "<<<Publication Title>>>",
+            "url": "https://<<<Publication URL>>>",
+            "author": {
+              "@type": "schema:Person",
+              "name": "<<<Author Name>>>"
+            },
+            "description": "Related whitepaper, report, or public documentation associated with this domain."
+          }
+        ],
+        "makesOffer": [
+          {
+            "@type": "schema:Offer",
+            "itemOffered": {
+              "@type": "schema:SoftwareApplication",
+              "name": "<<<Application Name>>>",
+              "applicationCategory": "<<<App Category>>>",
+              "operatingSystem": "<<<Supported OS>>>",
+              "description": "Application, product, or service offered by the domain."
+            }
+          }
+        ]
+      },
+      "relationships": {
+        "@type": "ixo:RelationshipProfile",
+        "description": "Defines institutional, funding, or partnership relationships relevant to the domain.",
+        "memberOf": [
+          {
+            "@type": "schema:Organization",
+            "name": "<<<Organization Name>>>",
+            "role": {
+              "@type": "schema:Role",
+              "roleName": "<<<Membership Role>>>",
+              "startDate": "<<<Start Date>>>"
+            },
+            "description": "Membership or participation in another organization or network."
+          }
+        ],
+        "prov:wasAssociatedWith": [
+          {
+            "@type": "schema:Organization",
+            "name": "<<<Partner Organization>>>",
+            "role": {
+              "@type": "schema:Role",
+              "roleName": "<<<Partnership Role>>>",
+              "startDate": "<<<Start Date>>>"
+            },
+            "description": "Associated organization involved in collaboration or project co-delivery."
+          }
+        ],
+        "schema:funding": [
+          {
+            "@type": "schema:Grant",
+            "funder": {
+              "@type": "schema:Organization",
+              "name": "<<<Funder Name>>>"
+            },
+            "amount": {
+              "@type": "schema:MonetaryAmount",
+              "currency": "<<<Currency>>>",
+              "value": "<<<Amount>>>"
+            },
+            "description": "Financial grant or funding provided to support the domain’s work."
+          }
+        ]
+      },
+      "events": {
+        "@type": "ixo:EventProfile",
+        "description": "Profiles events, workshops, or milestones connected to this domain.",
+        "primaryEvent": {
+          "@type": "schema:Event",
+          "name": "<<<Event Name>>>",
+          "startDate": "<<<Start Date>>>",
+          "endDate": "<<<End Date>>>",
+          "description": "Primary scheduled event or launch milestone.",
+          "location": {
+            "@type": "schema:Place",
+            "name": "<<<Event Location>>>",
+            "address": "<<<Event Address>>>"
+          },
+          "organizer": {
+            "@type": "schema:Organization",
+            "name": "<<<Organizer Name>>>"
+          }
+        }
+      },
+      "agents": [
+        {
+          "@type": "ixo:AgentCard",
+          "@id": "<<<Agent ID>>>",
+          "name": "<<<Agent Name>>>",
+          "description": "Agent, community, or actor associated with the domain.",
+          "url": "https://<<<Agent URL>>>",
+          "contactPoint": {
+            "@type": "schema:ContactPoint",
+            "email": "<<<Agent Contact Email>>>"
+          }
+        }
+      ],
+      "researchProfile": {
+        "@type": "ixo:ResearchProfile",
+        "description": "Metadata, ontology references, and research context supporting AI population.",
+        "ixo:seedQueries": ["<<<Seed Query 1>>>", "<<<Seed Query 2>>>"],
+        "schema:citation": [
+          {
+            "@type": "schema:Citation",
+            "name": "<<<Citation Title>>>",
+            "url": "https://<<<Citation URL>>>",
+            "publisher": "<<<Publisher Name>>>",
+            "datePublished": "<<<Publication Date>>>",
+            "description": "Relevant academic or technical publication related to this domain."
+          }
+        ],
+        "ixo:curationRules": [
+          {
+            "@type": "schema:CreativeWork",
+            "description": "Curation policies and logic for automated updates and human validation.",
+            "text": [
+              "All new data must include provenance metadata and source references.",
+              "Prefer verifiable credentials and peer-reviewed publications.",
+              "Maintain change logs and version history with timestamps.",
+              "Flag unverified data for curator review."
+            ]
+          }
+        ],
+        "ixo:embedding": {
+          "@type": "ixo:Embedding",
+          "model": "<<<Embedding Model>>>",
+          "vector": ["<<<v1>>>", "<<<v2>>>", "<<<v3>>>"],
+          "archetypeVectors": [
+            {
+              "label": "<<<Vector Label 1>>>",
+              "vector": ["<<<x1>>>", "<<<x2>>>", "<<<x3>>>"]
+            }
+          ],
+          "description": "Numerical embedding capturing semantic meaning of the domain."
+        },
+        "schema:dateModified": "<<<Last Modified Date>>>",
+        "description_dateModified": "Timestamp of last ontology or metadata update."
+      }
+    }
+  },
+  "proof": {
+    "@type": "Ed25519Signature2020",
+    "created": "<<<Signature Date>>>",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ixo:issuer:<<<Issuer DID>>>#keys-1",
+    "jws": "<<<JWS Signature>>>",
+    "description": "Cryptographic signature verifying the authenticity of this domain credential."
+  }
+}
