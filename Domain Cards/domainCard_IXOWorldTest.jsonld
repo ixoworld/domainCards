@@ -1,0 +1,380 @@
+
+{
+  "$schema": "../specs/ixo-domain-dao.schema.json",
+  "@context": [
+    "https://w3id.org/ixo/context/v1",
+    {
+      "proj": "https://linked.data.gov.au/def/project#",
+      "@version": 1.1
+    }
+  ],
+  "@id": "did:ixo:entity:ixoworld#dmn",
+  "@type": ["vc:VerifiableCredential", "ixo:DomainCard"],
+  "description": "Verbose ontology-documentation version of the IXO DomainCard schema, designed for semantic clarity and AI readability.",
+  "issuer": {
+    "@id": "did:ixo:issuer:ixo",
+    "name": "IXO World AG",
+    "description": "Entity issuing or maintaining this domain credential."
+  },
+  "issuanceDate": "2025-10-08",
+  "expirationDate": "2027-10-08",
+  "credentialSubject": {
+    "description": "The subject of the verifiable credential — the IXO domain entity being described.",
+    "entity": {
+      "@type": "ixo:EntityIdentity",
+      "description": "Represents the digital identity, metadata, and contextual links defining this domain entity.",
+      "identifier": [
+        {
+          "@type": "ixo:entityId",
+          "name": "Decentralized Identifier",
+          "value": "did:ixo:entity:ixoworld",
+          "description": "Globally unique DID identifier representing the entity."
+        },
+        {
+          "@type": "schema:PropertyValue",
+          "propertyID": "ixo:DID",
+          "name": "Decentralized Identifier",
+          "value": "did:ixo:entity:ixoworld",
+          "url": "https://explorer.ixo.world/entity/did:ixo:entity:ixoworld",
+          "description": "Canonical DID reference URL in the IXO Explorer."
+        }
+      ],
+      "name": "IXO World",
+      "alternateName": ["IXO.WORLD AG", "IXO"],
+      "url": ["https://www.ixo.world"],
+      "sameAs": ["https://x.com/ixoworld", "https://github.com/ixofoundation"],
+      "logo": {
+        "@type": "schema:ImageObject",
+        "@id": "https://cdn.prod.website-files.com/66b61e7b6c11ef464cdb8184/66b87b3d2c6bdb11671846b5_ixo_logo_blue.svg",
+        "contentUrl": "https://cdn.prod.website-files.com/66b61e7b6c11ef464cdb8184/66b87b3d2c6bdb11671846b5_ixo_logo_blue.svg",
+        "description": "Logo image representing this domain."
+      },
+      "image": [
+        {
+          "@type": "schema:ImageObject",
+          "@id": "https://www.ixo.world/images/ixo-banner.jpg",
+          "contentUrl": "https://www.ixo.world/images/ixo-banner.jpg",
+          "description": "Hero image or visual banner representing the domain."
+        },
+        {
+          "@type": "schema:ImageObject",
+          "@id": "https://www.ixo.world/images/impact-graph.png",
+          "contentUrl": "https://www.ixo.world/images/impact-graph.png",
+          "description": "Illustrative graphic representing IXO's Internet of Impact."
+        }
+      ],
+      "keywords": [
+        "Spatial Web",
+        "Blockchain",
+        "Impact Data",
+        "Web3",
+        "Digital MRV"
+      ],
+      "knowsAbout": [
+        "Verifiable Credentials",
+        "Decentralized Identifiers",
+        "Impact Measurement",
+        "Carbon Credits",
+        "Sustainability"
+      ],
+      "location": {
+        "@type": "schema:Place",
+        "areaServed": {
+          "@type": "schema:AdministrativeArea",
+          "name": "Global"
+        },
+        "postalAddress": {
+          "@type": "schema:PostalAddress",
+          "streetAddress": "Fürst-Johannes-Strasse 73",
+          "addressLocality": "Schaan",
+          "addressRegion": "Vaduz District",
+          "postalCode": "9494",
+          "addressCountry": "LI"
+        },
+        "contactPoint": [
+          {
+            "@type": "schema:ContactPoint",
+            "contactType": "General",
+            "email": "ixo@ixo.world",
+            "telephone": "+4230000000",
+            "availableLanguage": ["en", "de"]
+          },
+          {
+            "@type": "schema:ContactPoint",
+            "contactType": "Technical",
+            "email": "dev@ixo.world",
+            "telephone": "+4230000001",
+            "availableLanguage": ["en"]
+          }
+        ]
+      },
+      "program": {
+        "@type": "proj:Program",
+        "proj:hasGoal": "Enable verifiable impact data across social, environmental, and economic systems.",
+        "proj:hasObjective": [
+          "Develop interoperable Web3 protocols for sustainability and impact data exchange.",
+          "Implement decentralized identity and verifiable credential frameworks across domains.",
+          "Scale dMRV applications in climate, energy, and development programs globally."
+        ],
+        "proj:hasActivity": [
+          {
+            "@type": "prov:Activity",
+            "proj:activityName": "Deployment of IXO Blockchain Network",
+            "proj:activityDescription": "Launch and maintenance of the IXO blockchain built on Cosmos SDK for verifiable data transactions.",
+            "proj:activityStartDate": "2020-03-01",
+            "proj:activityEndDate": "TBD",
+            "proj:activityAgent": {
+              "@type": "schema:Organization",
+              "name": "IXO World"
+            }
+          },
+          {
+            "@type": "prov:Activity",
+            "proj:activityName": "Clean Cooking MRV Program with Supamoto and ECS Zambia",
+            "proj:activityDescription": "Digital MRV program enabling accurate tracking of clean cooking usage and carbon credit generation.",
+            "proj:activityStartDate": "2023-06-01",
+            "proj:activityEndDate": "Ongoing",
+            "proj:activityAgent": {
+              "@type": "schema:Organization",
+              "name": "IXO World"
+            }
+          }
+        ],
+        "proj:hasDeliverable": [
+          {
+            "@type": "proj:Deliverable",
+            "proj:deliverableName": "IXO White Paper",
+            "proj:deliverableDescription": "Foundational publication outlining IXO’s mission and architecture.",
+            "url": "https://www.ixo.world/white-paper",
+            "proj:deliverableDueDate": "2024-01-01",
+            "proj:deliverableStatus": "Published"
+          },
+          {
+            "@type": "proj:Deliverable",
+            "proj:deliverableName": "IXO 2025 Roadmap",
+            "proj:deliverableDescription": "Strategic roadmap for Spatial Web platform enhancements and ecosystem growth.",
+            "url": "https://www.ixo.world/roadmap",
+            "proj:deliverableDueDate": "2025-12-31",
+            "proj:deliverableStatus": "InProgress"
+          }
+        ],
+        "proj:produces": [
+          {
+            "@type": "proj:Result",
+            "proj:resultDescription": "Operational Spatial Web components, dMRV data pipelines, and digital credentials.",
+            "proj:resultMetric": "Active domains, number of verified claims, active projects onboarded."
+          }
+        ]
+      },
+      "composition": {
+        "@type": "schema:Collection",
+        "schema:hasPart": [
+          {
+            "@type": "schema:SoftwareSourceCode",
+            "@id": "https://github.com/ixofoundation/ixo-blockchain",
+            "name": "IXO Blockchain",
+            "url": "https://github.com/ixofoundation/ixo-blockchain",
+            "license": "Apache-2.0"
+          },
+          {
+            "@type": "schema:SoftwareApplication",
+            "@id": "https://portal.ixo.world",
+            "name": "IXO Portal",
+            "url": "https://portal.ixo.world",
+            "license": "CC-BY-4.0"
+          },
+          {
+            "@type": "schema:SoftwareApplication",
+            "@id": "https://studio.ixo.world",
+            "name": "IXO Studio",
+            "url": "https://studio.ixo.world",
+            "license": "MIT"
+          }
+        ],
+        "subjectOf": [
+          {
+            "@type": "schema:CreativeWork",
+            "name": "IXO White Paper",
+            "url": "https://www.ixo.world/white-paper",
+            "author": {
+              "@type": "schema:Person",
+              "name": "Shaun Conway"
+            }
+          },
+          {
+            "@type": "schema:CreativeWork",
+            "name": "IXO 2025 Roadmap",
+            "url": "https://www.ixo.world/roadmap",
+            "author": {
+              "@type": "schema:Organization",
+              "name": "IXO World"
+            }
+          }
+        ],
+        "makesOffer": [
+          {
+            "@type": "schema:Offer",
+            "itemOffered": {
+              "@type": "schema:SoftwareApplication",
+              "name": "IXO Mobile",
+              "applicationCategory": "BlockchainWallet",
+              "operatingSystem": "Android, iOS"
+            }
+          },
+          {
+            "@type": "schema:Offer",
+            "itemOffered": {
+              "@type": "schema:SoftwareApplication",
+              "name": "IXO Portal",
+              "applicationCategory": "WebApplication",
+              "operatingSystem": "Web"
+            }
+          }
+        ]
+      },
+      "relationships": {
+        "@type": "ixo:RelationshipProfile",
+        "memberOf": [
+          {
+            "@type": "schema:Organization",
+            "name": "Linux Foundation for Public Health",
+            "role": {
+              "@type": "schema:Role",
+              "roleName": "Ecosystem Partner",
+              "startDate": "2023-05-01"
+            }
+          }
+        ],
+        "prov:wasAssociatedWith": [
+          {
+            "@type": "schema:Organization",
+            "name": "DigiHub Liechtenstein",
+            "role": {
+              "@type": "schema:Role",
+              "roleName": "Co-development Partner",
+              "startDate": "2024-04-01"
+            }
+          },
+          {
+            "@type": "schema:Organization",
+            "name": "UNL Global",
+            "role": {
+              "@type": "schema:Role",
+              "roleName": "Design Partner",
+              "startDate": "2024-07-01"
+            }
+          }
+        ],
+        "schema:funding": [
+          {
+            "@type": "schema:Grant",
+            "funder": {
+              "@type": "schema:Organization",
+              "name": "UBS Optimus Foundation"
+            },
+            "amount": {
+              "@type": "schema:MonetaryAmount",
+              "currency": "CHF",
+              "value": "TBD"
+            }
+          }
+        ]
+      },
+      "events": {
+        "@type": "ixo:EventProfile",
+        "primaryEvent": {
+          "@type": "schema:Event",
+          "name": "Digital Innovation Day 2025",
+          "startDate": "2025-09-12",
+          "endDate": "2025-09-12",
+          "location": {
+            "@type": "schema:Place",
+            "name": "Vaduz",
+            "address": "DigiHub Liechtenstein"
+          },
+          "organizer": {
+            "@type": "schema:Organization",
+            "name": "DigiHub Liechtenstein"
+          }
+        }
+      },
+      "agents": [
+        {
+          "@type": "ixo:AgentCard",
+          "@id": "did:ixo:agent:minerva",
+          "name": "Minerva Oracle",
+          "url": "https://www.ixo.world/oracles/minerva",
+          "contactPoint": {
+            "@type": "schema:ContactPoint",
+            "email": "minerva@ixo.world"
+          }
+        },
+        {
+          "@type": "ixo:AgentCard",
+          "@id": "did:ixo:agent:wisp",
+          "name": "WISP Verification Agent",
+          "url": "https://www.ixo.world/oracles/wisp",
+          "contactPoint": {
+            "@type": "schema:ContactPoint",
+            "email": "wisp@ixo.world"
+          }
+        }
+      ],
+      "researchProfile": {
+        "@type": "ixo:ResearchProfile",
+        "ixo:seedQueries": [
+          "IXO Spatial Web",
+          "IXO blockchain Cosmos SDK",
+          "IXO Clean Cooking solution",
+          "IXO Liechtenstein DigiHub ecosystem"
+        ],
+        "schema:citation": [
+          {
+            "@type": "schema:Citation",
+            "name": "IXO White Paper",
+            "url": "https://www.ixo.world/white-paper",
+            "publisher": "IXO World AG",
+            "datePublished": "2024-01-01"
+          },
+          {
+            "@type": "schema:Citation",
+            "name": "IXO 2025 Roadmap",
+            "url": "https://www.ixo.world/roadmap",
+            "publisher": "IXO World AG",
+            "datePublished": "2025-01-01"
+          }
+        ],
+        "ixo:curationRules": [
+          {
+            "@type": "schema:CreativeWork",
+            "text": [
+              "All new data must include provenance metadata and source references.",
+              "Prefer verifiable credentials and peer-reviewed publications.",
+              "Maintain change logs and version history with timestamps.",
+              "Flag unverified data for curator review."
+            ]
+          }
+        ],
+        "ixo:embedding": {
+          "@type": "ixo:Embedding",
+          "model": "OpenAI GPT-5 Embedding v2",
+          "vector": ["0.14", "0.23", "0.78"],
+          "archetypeVectors": [
+            {
+              "label": "Impact Data Architecture",
+              "vector": ["0.12", "0.56", "0.91"]
+            }
+          ]
+        },
+        "schema:dateModified": "2025-10-08"
+      }
+    }
+  },
+  "proof": {
+    "@type": "Ed25519Signature2020",
+    "created": "2025-10-08",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:ixo:issuer:ixo#keys-1",
+    "jws": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.signature-ixoworld2025"
+  }
+}
