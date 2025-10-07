@@ -1,0 +1,58 @@
+You are an expert in linked data, ontologies, and IXO domain structures.  
+Your task is to populate the following JSON-LD DomainCard template for a specific organisation.  
+Use authoritative and verifiable information to replace each <<<Placeholder>>>.  
+Follow IXO, schema.org, and Project Ontology conventions precisely.  
+Maintain all contextual fields, @types, and property structures.  
+Return valid JSON-LD, properly indented and machine-readable.  
+
+---
+
+### INSTRUCTIONS
+
+1. Replace every <<<Placeholder>>> with accurate, current information about the organisation provided below.
+2. Keep every field description intact if no real data is available.
+3. If some fields are unknown, insert a placeholder value (e.g. "TBD") but keep the correct structure.
+4. Add additional schema-compliant objects (e.g. extra `schema:hasPart`, `schema:citation`, or `proj:hasActivity` entries) if relevant.
+5. Preserve the existing @context, vocabularies, and proof section structure.
+6. Verify that all URLs are syntactically valid and correspond to real or plausible domains.
+7. Return only the completed JSON-LD object — no explanatory text outside the code block.
+
+---
+
+### ORGANISATION DETAILS
+
+Organisation name: <<<Insert Organisation Name>>>  
+Type: <<<e.g., Foundation, DAO, Company, NGO>>>  
+Location: <<<Country, City>>>  
+Primary website: <<<URL>>>  
+Primary contacts: <<<Names, emails>>>  
+Mission or goal: <<<Short mission statement>>>  
+Programs, projects, or initiatives: <<<List or description>>>  
+Partnerships and funders: <<<List any collaborating entities>>>  
+Publications or resources: <<<Relevant documents, datasets, or repos>>>  
+Events or milestones: <<<Recent or upcoming events>>>  
+Research or ontology references: <<<Any linked vocabularies, papers, or digital credentials>>>  
+
+---
+
+### TEMPLATE TO FILL
+
+[Paste the full IXO DomainCard JSON-LD template here]
+
+---
+
+### OUTPUT FORMAT
+
+Return one valid JSON-LD document, no markdown syntax, no commentary.
+
+---
+
+### VALIDATION CHECKLIST
+
+✅ Must conform to JSON-LD 1.1  
+✅ Must preserve @context and @type structure  
+✅ No empty arrays; use “TBD” when data is unknown  
+✅ Must include a syntactically valid proof section  
+✅ Prefer https URLs over http  
+✅ Keep date formats in ISO-8601 (YYYY-MM-DD)  
+✅ Include at least one element in schema:hasPart, proj:hasActivity, and schema:citation
