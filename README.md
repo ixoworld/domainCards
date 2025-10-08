@@ -8,16 +8,10 @@ This repository provides JSON-LD schema templates for different types of IXO dom
 
 ## Repository Structure
 
-- `Domain Cards/` — Example JSON-LD templates for domain types:
-  - `Domain_Profile_dao.jsonld` - DAO profile template
-  - `Domain_Profile_group` - Group entity template
-  - `DomainProfile_asset.jsonld` - Digital/physical asset template
-  - `DomainProfile_deed.jsonld` - Deed ownership record template
-  - `DomainProfile_oracle.jsonld` - Oracle service template
-  - `DomainProfile_pod.jsonld` - Persistent operational domain template
-  - `DomainProfile_project.jsonld` - Project entity template
-  - `DomainProfile_protocol.jsonld` - Protocol specification template
-
+- `domainCard.jsonld
+- domainCard_IXOWorldTest.jsonld
+- GPT_Prompt
+  
 ## Domain Schemas
 
 Each domain template follows JSON-LD 1.1 standards and includes:
@@ -45,3 +39,4 @@ These schemas provide templates for creating domain profiles that can be used as
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
