@@ -1,0 +1,467 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/ixo/context/v1",
+    {
+      "schema": "https://schema.org/",
+      "ixo": "https://w3id.org/ixo/vocab/v1",
+      "prov": "http://www.w3.org/ns/prov#",
+      "proj": "https://linked.data.gov.au/def/project#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "ixo:vector": {
+        "@container": "@list",
+        "@type": "xsd:double"
+      },
+      "@protected": true
+    }
+  ],
+  "id": "did:ixo:entity:ixoworld#dmn",
+  "type": [
+    "VerifiableCredential",
+    "ixo:DomainCard"
+  ],
+  "issuer": {
+    "id": "did:ixo:issuer:ixoworld"
+  },
+  "validFrom": "2025-10-15T12:00:00+02:00",
+  "credentialSchema": {
+    "id": "https://github.com/ixoworld/domainCards/schemas/ixo-domain-card-1.json",
+    "type": "JsonSchema"
+  },
+  "credentialSubject": {
+    "id": "did:ixo:entity:ixoworld",
+    "type": [
+      "ixo:dao"
+    ],
+    "additionalType": [
+      "schema:Organization"
+    ],
+    "name": "IXO",
+    "alternateName": [
+      "IXO World",
+      "IXO.WORLD AG",
+      "Internet of Impacts"
+    ],
+    "description": "IXO is a Web3 + AI organization building the Internet of Impacts—an open Spatial Web platform and Layer-1 blockchain (Impact Hub) for measuring, verifying, and valuing real-world social, environmental, and economic outcomes. Headquartered in Schaan, Liechtenstein and founded by Dr Shaun Conway, IXO develops the IXO Protocol, Tendermint/IBC-based Impact Hub blockchain with CosmWasm, oracle-verified impact claims, and tokenized assets that power outcomes-based financing, climate markets, and intelligent coordination at global scale.",
+    "url": "https://www.ixo.world",
+    "sameAs": [
+      "https://twitter.com/ixoworld",
+      "https://github.com/ixofoundation",
+      "https://www.linkedin.com/company/ixoworld"
+    ],
+    "logo": {
+      "type": "schema:ImageObject",
+      "id": "https://www.ixo.world/favicon.ico",
+      "contentUrl": "https://cdn.prod.website-files.com/66b61e7b6c11ef464cdb8184/66b87b3d2c6bdb11671846b5_ixo_logo_blue.svg"
+    },
+    "image": [
+      {
+        "type": "schema:ImageObject",
+        "id": "https://www.ixo.world/favicon.ico",
+        "contentUrl": "https://cdn.prod.website-files.com/66b61e7b6c11ef464cdb8184/66befddbcb53c04ddc5dbf64_IXO.WORLD_meta.jpg"
+      }
+    ],
+    "keywords": [
+      "Internet of Impacts",
+      "dMRV",
+      "Impact Finance",
+      "Blockchain",
+      "Web3",
+      "AI",
+      "Spatial Web",
+      "Oracle",
+      "Tokenization",
+      "Cognitive Digital Twin Systems",
+      "Outcomes-based Financing",
+      "Carbon Credit",
+      "ITMOs"
+    ],
+    "knowsAbout": [
+      "outcomes-based financing",
+      "carbon credit tokenization",
+      "verifiable impact claims",
+      "AI oracles",
+      "impact finance",
+      "digital twin systems",
+      "dMRV"
+    ],
+    "address": {
+      "type": "schema:PostalAddress",
+      "streetAddress": "Fürst-Johannes-Strasse 73",
+      "addressLocality": "Schaan",
+      "addressRegion": "Schaan",
+      "postalCode": "9494",
+      "addressCountry": "LI"
+    },
+    "areaServed": {
+      "type": "schema:AdministrativeArea",
+      "name": "Global"
+    },
+    "contactPoint": [
+      {
+        "type": "schema:ContactPoint",
+        "contactType": "business",
+        "email": "hello@ixo.world",
+        "telephone": "TBD",
+        "availableLanguage": [
+          "en"
+        ]
+      }
+    ],
+    "composition": {
+      "type": "schema:Collection",
+      "hasPart": [
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://docs.ixo.world/articles/ixo-protocol",
+          "name": "IXO Protocol",
+          "description": "Open framework for decentralized impact data, claims verification, tokenization, and governance.",
+          "url": "https://docs.ixo.world/articles/ixo-protocol",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://docs.ixo.world/articles/ixo-blockchain",
+          "name": "IXO Blockchain / Impact Hub Network",
+          "description": "Cosmos SDK & Tendermint PoS chain with IBC and CosmWasm for digital twins, impact claims, tokenization, and oracle integrations.",
+          "url": "https://docs.ixo.world/articles/ixo-blockchain",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://www.ixo.world/ixo-token",
+          "name": "IXO Token",
+          "description": "Layer-1 utility token for gas, staking, governance, and oracle services on Impact Hub.",
+          "url": "https://www.ixo.world/ixo-token",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://www.ixo.world/products/ixo-matrix",
+          "name": "IXO Matrix",
+          "description": "Matrix-backed collaboration environment and data vault wired to on-chain claims, payments, and audit.",
+          "url": "https://www.ixo.world/products/ixo-matrix",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://www.ixo.world/white-paper",
+          "name": "IXO White Paper",
+          "description": "Foundational paper outlining the Internet of Impacts vision and protocol.",
+          "url": "https://www.ixo.world/white-paper",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "id": "https://portal.qi.space/",
+          "name": "Qi Space",
+          "description": "Qi is an “OS of intent” where people and AI agents coordinate work and produce verifiable outcomes on sovereign, IXO-powered infrastructure.",
+          "url": "https://www.qi.space/",
+          "creator": {
+            "type": "schema:Organization",
+            "name": "IXO"
+          },
+          "license": "TBD"
+        }
+      ],
+      "subjectOf": [
+        {
+          "type": "schema:CreativeWork",
+          "name": "Thinking in Generations – How new technologies promote sustainability (2024)",
+          "url": "https://finance.li/wp-content/uploads/2024/06/LF_Imagebroschuere_2024_EN_Web-1.pdf",
+          "author": {
+            "type": "schema:Person",
+            "name": "Editorial Team"
+          }
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "Alumni news: IXO’s Internet of Impacts powering sustainable development with Web3",
+          "url": "https://www.unicefventurefund.org/story/alumni-news-ixos-internet-impacts-powering-sustainable-development-web3",
+          "author": {
+            "type": "schema:Person",
+            "name": "Editorial Team"
+          }
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "UNICEF and partners bring child-lens investing to the forefront of global financial inclusion",
+          "url": "https://reliefweb.int/report/world/unicef-and-partners-bring-child-lens-investing-forefront-global-financial-inclusion",
+          "author": {
+            "type": "schema:Person",
+            "name": "Editorial Team"
+          }
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "IXO Roadmap",
+          "url": "https://www.ixo.world/roadmap",
+          "author": {
+            "type": "schema:Person",
+            "name": "IXO Team"
+          }
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "Cosmoverse keynote: Internet of Impacts",
+          "url": "https://www.youtube.com/watch?v=BDXUwwg8iHA",
+          "author": {
+            "type": "schema:Person",
+            "name": "Shaun Conway"
+          }
+        }
+      ]
+    },
+    "makesOffer": [
+      {
+        "type": "schema:Offer",
+        "itemOffered": {
+          "type": "schema:SoftwareApplication",
+          "name": "IXO Matrix",
+          "applicationCategory": "WebApplication",
+          "operatingSystem": "Any"
+        }
+      }
+    ],
+    "relationships": {
+      "memberOf": [
+        {
+          "type": "schema:Organization",
+          "name": "Blockchain for Social Impact"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "BioCarbon dMRV Working Group"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "BioCarbon dMRV Working Group"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "type": "schema:Organization",
+          "name": "UNICEF"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "UBS Optimus Foundation"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "VentureRock"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "DigiHub Liechtenstein"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "Freyr Energy"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "Coinbase Giving"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "GIZA"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "Interchain Foundation"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "Harambee"
+        },
+        {
+          "type": "schema:Organization",
+          "name": "Emerging Cooking Solutions"
+        }
+      ],
+      "funding": [
+        {
+          "type": "schema:Grant",
+          "funder": {
+            "type": "schema:Organization",
+            "name": "UNICEF Venture Fund"
+          },
+          "amount": {
+            "type": "schema:MonetaryAmount",
+            "currency": "USD",
+            "value": 100000
+          }
+        }
+      ]
+    },
+    "events": [
+      {
+        "type": "schema:Event",
+        "name": "Digital Innovation Day 2025",
+        "startDate": "2025-09-12",
+        "endDate": "2025-09-12",
+        "location": {
+          "type": "schema:Place",
+          "name": "Vaduz",
+          "address": "Vaduz, Liechtenstein"
+        },
+        "organizer": {
+          "type": "schema:Organization",
+          "name": "DigiHub Liechtenstein"
+        }
+      },
+      {
+        "type": "schema:Event",
+        "name": "Cosmoverse – Internet of Impacts Keynote",
+        "startDate": "TBD",
+        "endDate": "TBD",
+        "location": {
+          "type": "schema:Place",
+          "name": "TBD",
+          "address": "TBD"
+        },
+        "organizer": {
+          "type": "schema:Organization",
+          "name": "Cosmoverse"
+        }
+      }
+    ],
+    "agents": [
+      {
+        "type": "ixo:AgentCard",
+        "id": "did:ixo:entity:3a734353c4e2d535195332ce499834af",
+        "name": "Minerva",
+        "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:3a734353c4e2d535195332ce499834af/overview",
+        "contactPoint": {
+          "type": "schema:ContactPoint",
+          "email": "TBD"
+        }
+      },
+      {
+        "type": "ixo:AgentCard",
+        "id": "did:ixo:entity:4f7934e46749ed7095490f1d29605fba",
+        "name": "Offset Decision Oracle",
+        "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:4f7934e46749ed7095490f1d29605fba/overview",
+        "contactPoint": {
+          "type": "schema:ContactPoint",
+          "email": "TBD"
+        }
+      },
+      {
+        "type": "ixo:AgentCard",
+        "id": "did:ixo:entity:6cccd8461c06fa1319c66c1ac047f4ca",
+        "name": "QI",
+        "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:6cccd8461c06fa1319c66c1ac047f4ca/overview",
+        "contactPoint": {
+          "type": "schema:ContactPoint",
+          "email": "TBD"
+        }
+      }
+    ],
+    "credentials": [
+      {
+        "type": "VerifiableCredential",
+        "id": "TBD",
+        "name": "TBD",
+        "description": "TBD"
+      }
+    ],
+    "attributes": [
+      {
+        "@type": "ixo:Attribute",
+        "@id": "urn:ixo:attr:network",
+        "name": "Network",
+        "value": "Impact Hub (Cosmos SDK, Tendermint PoS, IBC, CosmWasm)"
+      },
+      {
+        "@type": "ixo:Attribute",
+        "@id": "urn:ixo:attr:token",
+        "name": "Native Token",
+        "value": "IXO"
+      }
+    ],
+    "researchProfile": {
+      "type": "ixo:ResearchProfile",
+      "ixo:seedQueries": [
+        "IXO Internet of Impacts",
+        "Impact Hub Network Cosmos IBC dMRV",
+        "IXO Token staking governance oracle fees"
+      ],
+      "citation": [
+        {
+          "type": "schema:CreativeWork",
+          "name": "IXO Protocol",
+          "url": "https://docs.ixo.world/articles/ixo-protocol",
+          "publisher": "IXO",
+          "datePublished": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "IXO Blockchain",
+          "url": "https://docs.ixo.world/articles/ixo-blockchain",
+          "publisher": "IXO",
+          "datePublished": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "IXO Token in the Spatial Web",
+          "url": "https://www.ixo.world/ixo-token",
+          "publisher": "IXO",
+          "datePublished": "TBD"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "Thinking in Generations – How new technologies promote sustainability",
+          "url": "https://finance.li/wp-content/uploads/2024/06/LF_Imagebroschuere_2024_EN_Web-1.pdf",
+          "publisher": "Liechtenstein Finance",
+          "datePublished": "2024-06-01"
+        },
+        {
+          "type": "schema:CreativeWork",
+          "name": "UNICEF Venture Fund Alumni: IXO’s Internet of Impacts",
+          "url": "https://www.unicefventurefund.org/story/alumni-news-ixos-internet-impacts-powering-sustainable-development-web3",
+          "publisher": "UNICEF Venture Fund",
+          "datePublished": "TBD"
+        }
+      ],
+      "ixo:embedding": {
+        "type": "ixo:Embedding",
+        "id": "urn:ixo:embedding:ixoworld-2025-10-15",
+        "model": "TBD",
+        "contentUrl": "https://TBD"
+      },
+      "dateModified": "2025-10-15"
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "created": "2025-10-15T12:00:00+02:00",
+    "verificationMethod": "did:ixo:issuer:ixoworld#keys-1",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<<multibase base58btc signature>>>"
+  }
+}

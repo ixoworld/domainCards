@@ -1,0 +1,33 @@
+name: Validate Domain Cards
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install tooling
+        run: |
+          npm i -D ajv ajv-formats ajv-cli jsonld-cli
+
+      - name: Validate JSON Schema
+        run: |
+          npx ajv validate -s schemas/ixo-domain-card-1.json -d "Domain Cards/*.jsonld" --spec=draft2020
+
+      - name: JSON-LD expand
+        run: |
+          npx jsonld expand "Domain Cards/*.jsonld" > /dev/null
+
+
