@@ -1,10 +1,9 @@
-IXO is a Web3 + AI organization building the Internet of Impacts, an open Spatial Web platform and Layer-1 blockchain for measuring, verifying, and valuing real-world outcomes. Headquartered in Schaan, Liechtenstein and founded by Dr Shaun Conway, it develops the IXO Protocol, the Impact Hub blockchain, oracle-verified impact claims, and tokenized assets for outcomes-based finance and intelligent coordination.
+//Customised for Shaun Conway
 
-Core components include the IXO Protocol, the Impact Hub blockchain built with Cosmos SDK and IBC for digital twins, impact claims, and tokenization, and the IXO Token, a Layer-1 utility used for fees, staking, governance, oracle/AI services, and staking for services and liquidity. IXO Matrix provides a sovereign, Matrix-based data and messaging layer with end-to-end encryption, federation, and agentic oracle workflows. Qi Space is an “OS of intent” that coordinates people and AI to produce verifiable outcomes on IXO’s infrastructure. 
+IXO
 
-IXO’s relationships include UNICEF, UBS Optimus Foundation, VentureRock, DigiHub Liechtenstein, Freyr Energy, Coinbase Giving, GIZA, Interchain Foundation, Harambee, and Emerging Cooking Solutions. It is a member of Blockchain for Social Impact and the BioCarbon dMRV Working Group. Funding includes a UNICEF Venture Fund grant of USD 100,000.
+IXO builds the Internet of Impacts: a Spatial Web platform and Layer-1 blockchain that uses verifiable claims, digital twins, and agentic oracles to coordinate and finance real-world outcomes. It serves governments, enterprises, DAOs, and developers running outcome-based programs across climate, health, and youth domains. The aim is dependable, auditable impact at internet scale.
 
-Operations are global, with a registered address in Schaan, Liechtenstein. Business contact is available in English; telephone is TBD. Topical focus spans dMRV, impact finance, tokenization, AI oracles, cognitive digital twin systems, and outcomes-based financing.
+As Owner, your leverage comes from governance and delivery cadence. Prioritize domain policy, authorization, and upgrade decisions, then unblock deployments where verifiable data and automated payments compound value. Focus on dMRV programs and agent onboarding where assurance and interoperability are non-negotiable. Keep the feedback loop tight between domain rooms, on-chain state, and service endpoints to maintain accountability.
 
-Notable events include Digital Innovation Day 2025 in Vaduz, organized by DigiHub Liechtenstein on 12 September 2025. Named agents listed include Minerva, Offset Decision Oracle, and QI.
-
+Open the Proposals page to review and act on the highest-impact decision pending now.
