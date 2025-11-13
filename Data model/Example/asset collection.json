@@ -1,0 +1,182 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/ixo/context/v1",
+    {
+      "schema": "https://schema.org/",
+      "ixo": "https://w3id.org/ixo/vocab/v1",
+      "prov": "http://www.w3.org/ns/prov#",
+      "proj": "https://linked.data.gov.au/def/project#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "id": "@id",
+      "type": "@type",
+      "@protected": true
+    }
+  ],
+  "id": "did:ixo:entity:52ea8ab94a90bb3a047dce227889fdd5#dmn",
+  "type": [
+    "VerifiableCredential",
+    "ixo:DomainCard"
+  ],
+  "issuer": {
+    "id": "did:ixo:issuer:ixoworld"
+  },
+  "validFrom": "2025-11-13T11:37:26.176Z",
+  "validUntil": "2030-11-13T11:37:26.176Z",
+  "credentialSchema": {
+    "id": "https://w3id.org/ixo/protocol/schema/v1#domainCard",
+    "type": "JsonSchema"
+  },
+  "credentialSubject": {
+    "id": "did:ixo:entity:52ea8ab94a90bb3a047dce227889fdd5",
+    "type": [
+      "ixo:asset/collection"
+    ],
+    "additionalType": [
+      "cleanCooking"
+    ],
+    "name": "Nifty 2.0 Collection",
+    "alternateName": [
+      
+    ],
+    "description": "Own the rights to a SupaMoto cookstoves in this collection. As the rights holder, you may lease your high-efficiency, pellet-fuel, forced-draft cookstove to SupaMoto, which uses it for home cooking services and pays you a monthly rental fee for its use—while the stove’s clean, near-smokeless combustion helps cut fuel consumption and indoor air pollution.",
+    "url": "https://supamoto.global/supamoto-stove/",
+    "sameAs": [
+    ],
+    "logo": {
+      "type": "schema:ImageObject",
+      "id": "https://testmx.ixo.earth/_matrix/media/v3/download/testmx.ixo.earth/pnHrTfEYIlNMapumKRCsrFao",
+      "contentUrl": "https://testmx.ixo.earth/_matrix/media/v3/download/testmx.ixo.earth/pnHrTfEYIlNMapumKRCsrFao"
+    },
+    "image": [
+      {
+        "type": "schema:ImageObject",
+        "id": "https://testmx.ixo.earth/_matrix/media/v3/download/testmx.ixo.earth/swXfIKmdZYOzzeteuvcgaDyn",
+        "contentUrl": "https://testmx.ixo.earth/_matrix/media/v3/download/testmx.ixo.earth/swXfIKmdZYOzzeteuvcgaDyn"
+      }
+    ],
+    "keywords": [
+      "Investment",
+      "Collection",
+      "Rental",
+      "Modern Energy Cooking Solutions",
+      "Biomass Pellets",
+      "Forced-draft",
+      "Gasifier",
+      "Nifty 2.0",
+      "SupaMoto Cookstove"
+    ],
+    "knowsAbout": [
+    ],
+    "address": {
+      "type": "schema:PostalAddress",
+      "addressCountry": "Zambia"
+    },
+    "areaServed": {
+      "type": "schema:AdministrativeArea",
+      "name": "Zambia"
+    },
+    "contactPoint": [
+      {
+        "type": "schema:ContactPoint",
+        "contactType": "support",
+        "email": "Info@supamoto.global",
+        "telephone": "2233",
+        "availableLanguage": [
+          "en",
+          "bem",
+          "ny"
+        ]
+      }
+    ],
+    "composition": {
+      "type": "schema:Collection",
+      "hasPart": [
+          
+      ],
+      "subjectOf": [
+        {
+          "type": "schema:CreativeWork",
+          "name": "Scaling access to clean cooking solutions in Zambia",
+          "url": "https://www.investafrica.com/insights-and-news/scaling-access-to-clean-cooking-solutions-in-zambia",
+          "author": {
+            "type": "schema:Organisation",
+            "name": "invest africa"
+          }
+        }
+      ]
+    },
+    "makesOffer": [
+    ],
+    "relationships": {
+      "memberOf": [
+        {
+          "type": "schema:Organization",
+          "name": "Emerging Cooking Solutions"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+      ],
+      "funding": [
+      ]
+    },
+    "agents": [
+      
+    ],
+    "credentials": [
+    ],
+    "attributes": [
+      {
+        "@type": "ixo:Attribute",
+        "@id": "#attribute/model",
+        "name": "schema:model",
+        "value": "MimiMoto"
+      },
+      {
+        "@type": "ixo:Attribute",
+        "@id": "#attribute/addressCountry",
+        "name": "schema:addressCountry",
+        "value": "Zambia"
+      }
+    ],
+	"project":{},
+    "researchProfile": {
+      "type": "ixo:ResearchProfile",
+      "ixo:seedQueries": [
+        "",
+        ""
+      ],
+      "citation": [
+        {
+          "type": "schema:CreativeWork",
+          "name": "Scaling access to clean cooking solutions in Zambia",
+          "url": "https://www.investafrica.com/insights-and-news/scaling-access-to-clean-cooking-solutions-in-zambia",
+          "publisher": "invest Africa",
+          "datePublished": "2025-02-24"
+        },
+		 {
+          "type": "schema:CreativeWork",
+          "name": "Clean cooking laboratory report",
+          "url": "https://testmx.ixo.earth/_matrix/media/v3/download/testmx.ixo.earth/KWfrKZlADdfoXakJRkgBGCVE",
+          "publisher": "KRIDI",
+          "datePublished": "2022-11-30"
+        }
+      ],
+      "ixo:embedding": {
+        "type": "ixo:Embedding",
+        "id": "<<<Embedding ID>>>",
+        "model": "<<<Embedding Model>>>",
+        "contentUrl": "https://<<<Embedding URL>>>"
+      },
+      "dateModified": "<<<ISO8601>>>"
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "created": "<<<ISO8601 timestamp>>>",
+    "verificationMethod": "did:ixo:issuer:<<<Issuer DID>>>#keys-1",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "<<<multibase base58btc signature>>>"
+  }
+}
