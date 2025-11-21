@@ -3,6 +3,7 @@
     "https://www.w3.org/ns/credentials/v2",
     "https://w3id.org/ixo/context/v1",
     {
+      "attribute": "https://w3id.org/ixo/attributes/v1/",
       "schema": "https://schema.org/",
       "ixo": "https://w3id.org/ixo/vocab/v1",
       "prov": "http://www.w3.org/ns/prov#",
