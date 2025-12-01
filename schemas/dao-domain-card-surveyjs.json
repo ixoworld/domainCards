@@ -1,0 +1,632 @@
+{
+  "title": "Domain Card Creation",
+  "description": "This survey collects structured information required to create a Domain Card Verifiable Credential in compliance with W3C standards.",
+  "pages": [
+    {
+      "name": "domainDetails",
+      "title": "Domain Information",
+      "description": "Provide identifying and descriptive information about the domain entity represented by this credential.",
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "type_2",
+          "title": "Domain Type ",
+          "isRequired": true,
+          "choicesByUrl": {
+            "url": "https://test.studio.ixo.earth/api/survey-choices?url=https://raw.githubusercontent.com/ixofoundation/ns/refs/heads/GraemeLeightonIXO-patch-4/protocol/entities/v1/index.json&path=entities.dao.types",
+            "valueName": "Value",
+            "titleName": "Text"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "daoType",
+          "title": "DAO Type",
+          "isRequired": true,
+          "choicesByUrl": {
+            "url": "https://test.studio.ixo.earth/api/survey-choices?url=https://raw.githubusercontent.com/ixofoundation/ns/refs/heads/GraemeLeightonIXO-patch-4/protocol/tags/v1/index.json&path=daoType",
+            "valueName": "Value",
+            "titleName": "Text"
+          }
+        },
+        {
+          "type": "text",
+          "name": "schema:name",
+          "title": "Domain Name",
+          "description": "The official name of the domain."
+        },
+        {
+          "type": "paneldynamic",
+          "name": "pannel_schema:alternateName",
+          "title": "Alternate Names",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:alternateName",
+              "title": "Alternate Name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "schema:url",
+          "title": "URL",
+          "description": "Primary URL for the domain",
+          "inputType": "url"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:sameAs",
+          "title": "Additional URLs",
+          "description": "Additional URLs associated with the domain (Twitter, Github, Medium)",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:sameAs.url",
+              "title": "URL",
+              "inputType": "url"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "schema.description",
+          "title": "Canonical Description",
+          "description": "A concise, one-paragraph description of the domain."
+        },
+        {
+          "type": "panel",
+          "name": "pannel_schema:media",
+          "title": "Domain Images",
+          "elements": [
+            {
+              "type": "text",
+              "name": "ixo:imageProfile_url",
+              "title": "Profile Image URL",
+              "inputType": "url"
+            },
+            {
+              "type": "file",
+              "name": "ixo:imageProfile",
+              "title": "Profile Image"
+            },
+            {
+              "type": "text",
+              "name": "ixo:imageLogo_url",
+              "title": "Logo URL",
+              "inputType": "url"
+            },
+            {
+              "type": "file",
+              "name": "ixo:imageLogo",
+              "title": "Logo"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "schema:keywords",
+          "title": "Keywords",
+          "description": "List of  comma separated keywords describing the domain’s focus areas."
+        },
+        {
+          "type": "paneldynamic",
+          "name": "pannel_ixo:knowsAbout",
+          "title": "Topics /Primary Knowledge Areas",
+          "description": "Subjects or fields the domain is knowledgeable in.",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "ixo:knowsAbout",
+              "title": "Knows About"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contactAndLocation",
+      "title": "Contact & Location",
+      "description": "Provide address and contact information for the domain.",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "schema:address",
+          "title": "Postal Address",
+          "elements": [
+            {
+              "type": "text",
+              "name": "schema:streetAddress",
+              "title": "Street Address"
+            },
+            {
+              "type": "text",
+              "name": "schema:addressLocality",
+              "title": "City"
+            },
+            {
+              "type": "text",
+              "name": "schema:addressRegion",
+              "title": "Region/State"
+            },
+            {
+              "type": "text",
+              "name": "schema:postalCode",
+              "title": "Postal Code"
+            },
+            {
+              "type": "text",
+              "name": "schema:addressCountry",
+              "title": "Country"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "schema:AdministrativeArea",
+          "title": "Area Served"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "pannel:schema_contactPoint",
+          "title": "Contact Points",
+          "description": "List available contact methods for support, business, or technical inquiries.",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:contactType",
+              "title": "Contact Type",
+              "description": "Example: General, Support, Sales"
+            },
+            {
+              "type": "text",
+              "name": "schema:email",
+              "title": "Email Address",
+              "inputType": "email"
+            },
+            {
+              "type": "text",
+              "name": "schema:telephone",
+              "title": "Telephone ",
+              "inputType": "tel"
+            },
+            {
+              "type": "text",
+              "name": "schema:availableLanguage",
+              "title": "Languages Supported",
+              "description": "Comma separated two letter language code (English = en)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "composition",
+      "title": "Composition",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "schema:hasPart",
+          "title": "Domain Components",
+          "description": "Describes the specific items, documents, linked domains, or components that belong to this domain.",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:hasPart.id",
+              "title": "Identifier",
+              "description": "URI or URL "
+            },
+            {
+              "type": "text",
+              "name": "schema:hasPart.name",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:hasPart.description",
+              "title": "Description"
+            },
+            {
+              "type": "text",
+              "name": "schema:hasPart.url",
+              "title": "URL",
+              "description": "If different to the identifier",
+              "inputType": "url"
+            },
+            {
+              "type": "text",
+              "name": "schema:hasPart.creator.name",
+              "title": "Creator",
+              "description": "Component creator (Organisation Name)"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:subjectOf",
+          "title": "Publications",
+          "description": "Publications produced by the domain or where the domain is the subject.",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:subjectOf.name",
+              "title": "Publication Title"
+            },
+            {
+              "type": "text",
+              "name": "schema:subjectOf.url",
+              "title": "URL"
+            },
+            {
+              "type": "text",
+              "name": "schema:subjectOf.author.name",
+              "title": "Author"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:makesOffer",
+          "title": "Offers (Product and/or Services)",
+          "templateElements": [
+            {
+              "type": "dropdown",
+              "name": "schema:itemOffered.type",
+              "title": "Catagory",
+              "choices": [
+                {
+                  "value": "product",
+                  "text": "Product"
+                },
+                {
+                  "value": "service",
+                  "text": "Service"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "schema:itemOffered.name",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:itemOffered.description",
+              "title": "Description"
+            },
+            {
+              "type": "text",
+              "name": "schema:itemOffered.url",
+              "title": "URL",
+              "inputType": "url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "relationshipsAndOffers",
+      "title": "Relationships & Funding",
+      "description": "Describe the domain’s relationships with other organizations and its software or service offerings.",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "schema:memberOf",
+          "title": "Memberships",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:memberOf.name",
+              "title": "Organization Name"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:wasAssociatedWith",
+          "title": "Partner/Associated Organizations",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:wasAssociatedWith.name",
+              "title": "Organization Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:wasAssociatedWith.url",
+              "title": "URL"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:funding",
+          "title": "Funding Sources",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:funder.name",
+              "title": "Funder Organization"
+            },
+            {
+              "type": "text",
+              "name": "schema:amount.currency",
+              "title": "Currency Code"
+            },
+            {
+              "type": "text",
+              "name": "schema:amount.value",
+              "title": "Funding Amount"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "title": "Events",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "schema:event",
+          "title": "Event",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:event.name",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:startDate",
+              "title": "Start Date"
+            },
+            {
+              "type": "text",
+              "name": "schema:endDate",
+              "title": "End Date"
+            },
+            {
+              "type": "text",
+              "name": "schema:event.location",
+              "title": "Location Name"
+            },
+            {
+              "type": "panel",
+              "name": "schema:event.address",
+              "title": "Postal Address",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "schema:event.streetAddress",
+                  "title": "Street Address"
+                },
+                {
+                  "type": "text",
+                  "name": "schema:event.addressLocality",
+                  "title": "City"
+                },
+                {
+                  "type": "text",
+                  "name": "schema:event.addressRegion",
+                  "title": "Region/State"
+                },
+                {
+                  "type": "text",
+                  "name": "schema:event.postalCode",
+                  "title": "Postal Code"
+                },
+                {
+                  "type": "text",
+                  "name": "schema:event.addressCountry",
+                  "title": "Country"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "agentsCredentialsAndAttributes",
+      "title": "Agents, Credentials, and Attributes",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "ixo:agentCard",
+          "title": "Agents",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "ixo:agentCard.id",
+              "title": "Agent ID"
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.name",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.description",
+              "title": "Description"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "ixo:verifiableCredential",
+          "title": "Credentials",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:ID",
+              "title": "Credential ID"
+            },
+            {
+              "type": "text",
+              "name": "schema:Name",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:description",
+              "title": "Description"
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "ixo:attribute",
+          "title": "Attributes",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:ID_2",
+              "title": "Attribute ID"
+            },
+            {
+              "type": "text",
+              "name": "schema:name_2",
+              "title": "Name"
+            },
+            {
+              "type": "text",
+              "name": "schema:description_2",
+              "title": "Description"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "title": "Project Information",
+      "description": "Provide details about the related project(s), including objectives, sponsors, and deliverables.",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "pannel_proj:project",
+          "title": "Projects",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "proj:project.name",
+              "title": "Project Title"
+            },
+            {
+              "type": "comment",
+              "name": "proj:project.description",
+              "title": "Project Mission",
+              "description": "High-level purpose or mission statement of the project."
+            },
+            {
+              "type": "paneldynamic",
+              "name": "proj:project.hadObjective",
+              "title": "Project Objectives",
+              "templateElements": [
+                {
+                  "type": "comment",
+                  "name": "proj:hadObjective",
+                  "title": "Project Objective"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "proj:plannedStart",
+              "title": "Planned Start Date",
+              "inputType": "datetime-local"
+            },
+            {
+              "type": "text",
+              "name": "proj:plannedEnd",
+              "title": "Planned End Date",
+              "inputType": "datetime-local"
+            },
+            {
+              "type": "paneldynamic",
+              "name": "proj:wasFundedThrough",
+              "title": "Project Funding",
+              "templateElements": [
+                {
+                  "type": "text",
+                  "name": "proj:moneyAmount",
+                  "title": "Funding Amount"
+                },
+                {
+                  "type": "text",
+                  "name": "proj:moneyCurrency",
+                  "title": "Funding Currency"
+                },
+                {
+                  "type": "text",
+                  "name": "prov.agent.name",
+                  "title": "Funder Name"
+                },
+                {
+                  "type": "text",
+                  "name": "prov:agent.id",
+                  "title": "Funder URL",
+                  "inputType": "url"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "researchProfile",
+      "title": "Research Profile",
+      "description": "Provide information about the research profile associated with the domain.",
+      "elements": [
+        {
+          "type": "paneldynamic",
+          "name": "ixo:ResearchProfile",
+          "title": "Seed Queries",
+          "templateElements": [
+            {
+              "type": "comment",
+              "name": "ixo:seedQueries",
+              "title": "Seed Query",
+              "description": "Seed keywords or queries that define the research scope."
+            }
+          ]
+        },
+        {
+          "type": "paneldynamic",
+          "name": "schema:creativeWork",
+          "title": "Citations",
+          "templateElements": [
+            {
+              "type": "text",
+              "name": "schema:creativeWork.name",
+              "title": "Citation Title"
+            },
+            {
+              "type": "text",
+              "name": "schema:creativeWork.url",
+              "title": "Citation URL"
+            },
+            {
+              "type": "text",
+              "name": "schema:creativeWork.publisher",
+              "title": "Publisher"
+            },
+            {
+              "type": "text",
+              "name": "schema:creativeWork.datePublished",
+              "title": "Date Published",
+              "inputType": "datetime-local"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "showPageTitles": false,
+  "showQuestionNumbers": "on",
+  "showProgressBar": true,
+  "progressBarLocation": "top"
+}
