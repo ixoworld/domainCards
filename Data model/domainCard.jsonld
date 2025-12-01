@@ -167,7 +167,14 @@
         "location": {
           "type": "schema:Place",
           "name": "<<<Venue>>>",
-          "address": "<<<Address or PostalAddress>>>"
+          "address": {
+              "type": "schema:PostalAddress",
+              "streetAddress": "<<<Street>>>",
+              "addressLocality": "<<<City>>>",
+              "addressRegion": "<<<Region>>>",
+              "postalCode": "<<<Postal Code>>>",
+              "addressCountry": "<<<ISO country>>>"
+              },
         },
         "organizer": {
           "type": "schema:Organization",
