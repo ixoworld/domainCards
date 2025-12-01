@@ -187,10 +187,7 @@
         "type": "ixo:AgentCard",
         "id": "<<<Agent ID>>>",
         "name": "<<<Agent Name>>>",
-        "url": "https://<<<Agent URL>>>",
-        "contactPoint": {
-          "type": "schema:ContactPoint",
-          "email": "<<<Agent Email>>>"
+        "description": "<<<Agent Description>>>"
         }
       }
     ],
