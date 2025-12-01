@@ -125,9 +125,8 @@
         "itemOffered": {
           "type": "schema:SoftwareApplication",
           "name": "<<<App>>>",
-          "applicationCategory": "<<<Category>>>",
-          "operatingSystem": "<<<OS>>>"
-        }
+          "description": "<<<Description>>>",
+          "url":"<<<URL>>>"}
       }
     ],
     "relationships": {
@@ -140,7 +139,8 @@
       "prov:wasAssociatedWith": [
         {
           "type": "schema:Organization",
-          "name": "<<<Partner Organization>>>"
+          "name": "<<<Partner Organization>>>",
+          "url":"<<<URL>>>"
         }
       ],
       "funding": [
