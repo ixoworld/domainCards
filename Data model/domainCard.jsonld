@@ -220,10 +220,7 @@
         "<<<Objective 3>>>"
       ],
       "proj:plannedStart": "<<<ISO8601>>>",
-      "proj:plannedEnd": "<<<ISO8601>>>",
-      "proj:hadSponsor": {
-        "type": "schema:Organization",
-        "name": "<<<Sponsor Organization>>>"
+      "proj:plannedEnd": "<<<ISO8601>>>"
       },
       "proj:wasFundedThrough": [
         {
