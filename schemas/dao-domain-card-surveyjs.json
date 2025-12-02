@@ -8,6 +8,29 @@
       "description": "Provide identifying and descriptive information about the domain entity represented by this credential.",
       "elements": [
         {
+          "type": "boolean",
+          "name": "ixo:advancedDomainSettings",
+          "title": "Show Advanced Options",
+          "defaultValue": "false"
+        },
+        {
+          "type": "dropdown",
+          "name": "type_1",
+          "visible": false,
+          "title": "Domain Type (Primary)",
+          "defaultValue": "dao",
+          "choices": [
+            {
+              "value": "dao",
+              "text": "DAO"
+            },
+            {
+              "value": "protocol",
+              "text": "Protocol"
+            }
+          ]
+        },
+        {
           "type": "dropdown",
           "name": "type_2",
           "title": "Domain Type ",
@@ -31,9 +54,26 @@
         },
         {
           "type": "text",
+          "name": "schema:validFrom",
+          "title": "Valid From",
+          "defaultValueExpression": "today()",
+          "isRequired": true,
+          "inputType": "date"
+        },
+        {
+          "type": "text",
+          "name": "schema:validUntil",
+          "title": "Vaid Untill",
+          "defaultValueExpression": "today()",
+          "isRequired": true,
+          "inputType": "date"
+        },
+        {
+          "type": "text",
           "name": "schema:name",
           "title": "Domain Name",
-          "description": "The official name of the domain."
+          "description": "The official name of the domain.",
+          "isRequired": true
         },
         {
           "type": "paneldynamic",
@@ -72,7 +112,8 @@
           "type": "comment",
           "name": "schema.description",
           "title": "Canonical Description",
-          "description": "A concise, one-paragraph description of the domain."
+          "description": "A concise, one-paragraph description of the domain.",
+          "isRequired": true
         },
         {
           "type": "panel",
@@ -126,6 +167,7 @@
     },
     {
       "name": "contactAndLocation",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Contact & Location",
       "description": "Provide address and contact information for the domain.",
       "elements": [
@@ -202,6 +244,7 @@
     },
     {
       "name": "composition",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Composition",
       "elements": [
         {
@@ -306,6 +349,7 @@
     },
     {
       "name": "relationshipsAndOffers",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Relationships & Funding",
       "description": "Describe the domain’s relationships with other organizations and its software or service offerings.",
       "elements": [
@@ -364,6 +408,7 @@
     },
     {
       "name": "events",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Events",
       "elements": [
         {
@@ -429,6 +474,7 @@
     },
     {
       "name": "agentsCredentialsAndAttributes",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Agents, Credentials, and Attributes",
       "elements": [
         {
@@ -501,6 +547,7 @@
     },
     {
       "name": "project",
+      "visibleIf": "{ixo:advancedDomainSettings} = true",
       "title": "Project Information",
       "description": "Provide details about the related project(s), including objectives, sponsors, and deliverables.",
       "elements": [
