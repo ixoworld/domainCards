@@ -75,6 +75,10 @@
       "postalCode": "<<<Postal Code>>>",
       "addressCountry": "<<<ISO country>>>"
     },
+   "geoCoordinates":{
+      "latitude": "<<lat>>"
+      "longitude": "<<lon>>"
+    },
     "areaServed": {
       "type": "schema:AdministrativeArea",
       "name": "<<<Area>>>"
