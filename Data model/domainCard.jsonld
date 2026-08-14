@@ -9,6 +9,15 @@
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "id": "@id",
       "type": "@type",
+      "supportedInterfaces": "ixo:supportedInterfaces",
+      "provider": "ixo:provider",
+      "version": "schema:version",
+      "capabilities": "ixo:capabilities",
+      "defaultInputModes": "ixo:defaultInputModes",
+      "defaultOutputModes": "ixo:defaultOutputModes",
+      "skills": "ixo:skills",
+      "signatures": "ixo:signatures",
+      "iconUrl": "schema:thumbnailUrl",
       "yoma": "https://w3id.org/yoma/vocab/v1/",
       "relatedDocument": { "@id": "schema:subjectOf", "@container": "@set" },
       "@protected": true
@@ -190,7 +199,63 @@
         "type": "ixo:AgentCard",
         "id": "<<<Agent ID>>>",
         "name": "<<<Agent Name>>>",
-        "description": "<<<Agent Description>>>"
+        "description": "<<<Agent Description>>>",
+        "url": "<<<Linked A2A Agent Card URL, optional>>>",
+        "supportedInterfaces": [
+          {
+            "url": "https://<<<A2A Endpoint URL>>>",
+            "protocolBinding": "JSONRPC",
+            "protocolVersion": "1.0"
+          }
+        ],
+        "provider": {
+          "organization": "<<<Provider Name>>>",
+          "url": "https://<<<Provider URL>>>"
+        },
+        "version": "<<<Agent Card Version>>>",
+        "capabilities": {
+          "streaming": true,
+          "pushNotifications": false,
+          "extendedAgentCard": false,
+          "extensions": [
+            {
+              "uri": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1",
+              "params": {
+                "capabilityPatterns": [
+                  {
+                    "skillId": "<<<Skill ID>>>",
+                    "can": ["claim/*", "bid/evaluate"],
+                    "actionTypes": ["qi/claim.submit", "qi/bid.evaluate"]
+                  }
+                ],
+                "identityBindings": {
+                  "did": "<<<Agent DID>>>",
+                  "matrixUserId": "<<<Matrix User ID>>>",
+                  "domainCardId": "<<<Optional Domain Card ID>>>"
+                },
+                "proofRefs": ["<<<Proof ID or URI>>>"],
+                "signatureRefs": ["<<<Signature ID or URI>>>"]
+              }
+            }
+          ]
+        },
+        "defaultInputModes": ["application/json"],
+        "defaultOutputModes": ["application/json"],
+        "skills": [
+          {
+            "id": "<<<Skill ID>>>",
+            "name": "<<<Skill Name>>>",
+            "description": "<<<Skill Description>>>",
+            "tags": ["<<<Tag>>>"]
+          }
+        ],
+        "signatures": [
+          {
+            "protected": "<<<Base64url JWS Protected Header>>>",
+            "signature": "<<<Base64url JWS Signature>>>"
+          }
+        ],
+        "iconUrl": "https://<<<Icon URL>>>"
       }
     ],
     "credentials": [

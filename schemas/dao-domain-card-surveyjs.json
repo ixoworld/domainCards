@@ -496,6 +496,219 @@
               "type": "text",
               "name": "ixo:agentCard.description",
               "title": "Description"
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.url",
+              "title": "Linked Agent Card URL",
+              "inputType": "url"
+            },
+            {
+              "type": "paneldynamic",
+              "name": "ixo:agentCard.supportedInterfaces",
+              "title": "Supported Interfaces",
+              "templateElements": [
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.supportedInterfaces.url",
+                  "title": "Interface URL",
+                  "inputType": "url"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "ixo:agentCard.supportedInterfaces.protocolBinding",
+                  "title": "Protocol Binding",
+                  "choices": [
+                    "JSONRPC",
+                    "GRPC",
+                    "HTTP+JSON"
+                  ]
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.supportedInterfaces.tenant",
+                  "title": "Tenant"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.supportedInterfaces.protocolVersion",
+                  "title": "Protocol Version"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.provider.organization",
+              "title": "Provider Organization"
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.provider.url",
+              "title": "Provider URL",
+              "inputType": "url"
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.version",
+              "title": "Version"
+            },
+            {
+              "type": "tagbox",
+              "name": "ixo:agentCard.defaultInputModes",
+              "title": "Default Input Modes",
+              "choices": [
+                "application/json",
+                "text/plain",
+                "text/markdown"
+              ]
+            },
+            {
+              "type": "tagbox",
+              "name": "ixo:agentCard.defaultOutputModes",
+              "title": "Default Output Modes",
+              "choices": [
+                "application/json",
+                "text/plain",
+                "text/markdown"
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ixo:agentCard.iconUrl",
+              "title": "Icon URL",
+              "inputType": "url"
+            },
+            {
+              "type": "boolean",
+              "name": "ixo:agentCard.capabilities.streaming",
+              "title": "Supports Streaming"
+            },
+            {
+              "type": "boolean",
+              "name": "ixo:agentCard.capabilities.pushNotifications",
+              "title": "Supports Push Notifications"
+            },
+            {
+              "type": "boolean",
+              "name": "ixo:agentCard.capabilities.extendedAgentCard",
+              "title": "Has Authenticated Extended Agent Card"
+            },
+            {
+              "type": "paneldynamic",
+              "name": "ixo:agentCard.skills",
+              "title": "Skills",
+              "templateElements": [
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.skills.id",
+                  "title": "Skill ID"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.skills.name",
+                  "title": "Skill Name"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.skills.description",
+                  "title": "Skill Description"
+                },
+                {
+                  "type": "tagbox",
+                  "name": "ixo:agentCard.skills.tags",
+                  "title": "Skill Tags"
+                }
+              ]
+            },
+            {
+              "type": "paneldynamic",
+              "name": "ixo:agentCard.capabilities.extensions",
+              "title": "Capability Extensions",
+              "defaultValue": [
+                {
+                  "ixo:agentCard.capabilities.extensions.uri": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1"
+                }
+              ],
+              "templateElements": [
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.capabilities.extensions.uri",
+                  "title": "Extension URI",
+                  "defaultValue": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.capabilities.extensions.params.identityBindings.did",
+                  "title": "Agent DID"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.capabilities.extensions.params.identityBindings.matrixUserId",
+                  "title": "Matrix User ID"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.capabilities.extensions.params.identityBindings.domainCardId",
+                  "title": "Domain Card ID"
+                },
+                {
+                  "type": "paneldynamic",
+                  "name": "ixo:agentCard.capabilities.extensions.params.capabilityPatterns",
+                  "title": "Capability Patterns",
+                  "templateElements": [
+                    {
+                      "type": "text",
+                      "name": "ixo:agentCard.capabilities.extensions.params.capabilityPatterns.skillId",
+                      "title": "Skill ID"
+                    },
+                    {
+                      "type": "tagbox",
+                      "name": "ixo:agentCard.capabilities.extensions.params.capabilityPatterns.can",
+                      "title": "Capabilities",
+                      "choices": [
+                        "claim/*",
+                        "bid/evaluate"
+                      ]
+                    },
+                    {
+                      "type": "tagbox",
+                      "name": "ixo:agentCard.capabilities.extensions.params.capabilityPatterns.actionTypes",
+                      "title": "Action Types",
+                      "choices": [
+                        "qi/claim.submit",
+                        "qi/bid.evaluate"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tagbox",
+                  "name": "ixo:agentCard.capabilities.extensions.params.proofRefs",
+                  "title": "Proof References"
+                },
+                {
+                  "type": "tagbox",
+                  "name": "ixo:agentCard.capabilities.extensions.params.signatureRefs",
+                  "title": "Signature References"
+                }
+              ]
+            },
+            {
+              "type": "paneldynamic",
+              "name": "ixo:agentCard.signatures",
+              "title": "Signatures",
+              "templateElements": [
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.signatures.protected",
+                  "title": "Protected Header"
+                },
+                {
+                  "type": "text",
+                  "name": "ixo:agentCard.signatures.signature",
+                  "title": "Signature"
+                }
+              ]
             }
           ]
         },

@@ -66,14 +66,248 @@
         "makesOffer": { "type": ["object", "array"] },
         "relationships": { "type": "object" },
         "events": { "type": "array" },
-        "agents": { "type": "array" },
+        "agents": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentCard" }
+        },
         "researchProfile": { "type": "object" }
       },
       "additionalProperties": true
     },
     "proof": { "type": ["object", "array"] }
   },
+  "$defs": {
+    "agentCard": {
+      "description": "IXO AgentCard. Accepts legacy shallow cards and A2A-compatible embedded or linked cards.",
+      "anyOf": [
+        { "$ref": "#/$defs/legacyAgentCard" },
+        { "$ref": "#/$defs/a2aAgentCard" }
+      ]
+    },
+    "legacyAgentCard": {
+      "type": "object",
+      "required": ["id", "name"],
+      "not": {
+        "anyOf": [
+          { "required": ["supportedInterfaces"] },
+          { "required": ["provider"] },
+          { "required": ["version"] },
+          { "required": ["capabilities"] },
+          { "required": ["defaultInputModes"] },
+          { "required": ["defaultOutputModes"] },
+          { "required": ["skills"] },
+          { "required": ["signatures"] },
+          { "required": ["iconUrl"] }
+        ]
+      },
+      "properties": {
+        "type": {
+          "oneOf": [
+            { "const": "ixo:AgentCard" },
+            {
+              "type": "array",
+              "contains": { "const": "ixo:AgentCard" }
+            }
+          ]
+        },
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "a2aAgentCard": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "supportedInterfaces",
+        "version",
+        "capabilities",
+        "defaultInputModes",
+        "defaultOutputModes",
+        "skills"
+      ],
+      "properties": {
+        "type": {
+          "oneOf": [
+            { "const": "ixo:AgentCard" },
+            {
+              "type": "array",
+              "contains": { "const": "ixo:AgentCard" }
+            }
+          ]
+        },
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "cardUrl": { "type": "string", "format": "uri" },
+        "supportedInterfaces": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentInterface" },
+          "minItems": 1
+        },
+        "provider": {
+          "type": "object",
+          "properties": {
+            "organization": { "type": "string" },
+            "name": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          },
+          "additionalProperties": true
+        },
+        "version": { "type": "string" },
+        "capabilities": { "$ref": "#/$defs/agentCapabilities" },
+        "defaultInputModes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "defaultOutputModes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "skills": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentSkill" }
+        },
+        "signatures": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentCardSignature" }
+        },
+        "iconUrl": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "agentCapabilities": {
+      "type": "object",
+      "properties": {
+        "streaming": { "type": "boolean" },
+        "pushNotifications": { "type": "boolean" },
+        "extendedAgentCard": { "type": "boolean" },
+        "extensions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/agentCapabilityExtension" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "agentInterface": {
+      "type": "object",
+      "required": ["url", "protocolBinding", "protocolVersion"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "protocolBinding": {
+          "type": "string",
+          "enum": ["JSONRPC", "GRPC", "HTTP+JSON"]
+        },
+        "tenant": { "type": "string" },
+        "protocolVersion": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "agentCapabilityExtension": {
+      "type": "object",
+      "required": ["uri", "params"],
+      "properties": {
+        "uri": { "type": "string" },
+        "params": { "type": "object", "additionalProperties": true }
+      },
+      "if": {
+        "properties": {
+          "uri": {
+            "const": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "params": { "$ref": "#/$defs/flowCapabilitiesParams" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "flowCapabilitiesParams": {
+      "type": "object",
+      "required": ["capabilityPatterns"],
+      "anyOf": [
+        { "required": ["identityBindings"] },
+        { "required": ["did", "matrixUserId"] }
+      ],
+      "properties": {
+        "capabilityPatterns": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/capabilityPattern" },
+          "minItems": 1
+        },
+        "did": { "type": "string" },
+        "matrixUserId": { "type": "string" },
+        "domainCardId": { "type": "string" },
+        "identityBindings": { "$ref": "#/$defs/identityBindings" },
+        "proofRefs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "signatureRefs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "capabilityPattern": {
+      "type": "object",
+      "required": ["skillId", "can", "actionTypes"],
+      "properties": {
+        "skillId": { "type": "string" },
+        "can": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "actionTypes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "identityBindings": {
+      "type": "object",
+      "required": ["did", "matrixUserId"],
+      "properties": {
+        "did": { "type": "string" },
+        "matrixUserId": { "type": "string" },
+        "domainCardId": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "agentSkill": {
+      "type": "object",
+      "required": ["id", "name", "description", "tags"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "agentCardSignature": {
+      "type": "object",
+      "required": ["protected", "signature"],
+      "properties": {
+        "protected": { "type": "string" },
+        "header": { "type": "object", "additionalProperties": true },
+        "signature": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
   "additionalProperties": true
 }
-
-

@@ -10,6 +10,15 @@
       "xsd": "http://www.w3.org/2001/XMLSchema#",
       "id": "@id",
       "type": "@type",
+      "supportedInterfaces": "ixo:supportedInterfaces",
+      "provider": "ixo:provider",
+      "version": "schema:version",
+      "capabilities": "ixo:capabilities",
+      "defaultInputModes": "ixo:defaultInputModes",
+      "defaultOutputModes": "ixo:defaultOutputModes",
+      "skills": "ixo:skills",
+      "signatures": "ixo:signatures",
+      "iconUrl": "schema:thumbnailUrl",
       "ixo:vector": {
         "@container": "@list",
         "@type": "xsd:double"
@@ -354,7 +363,81 @@
         "type": "ixo:AgentCard",
         "id": "did:ixo:entity:3a734353c4e2d535195332ce499834af",
         "name": "Minerva",
+        "description": "IXO agent for discovering, evaluating, and routing verifiable impact claims.",
         "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:3a734353c4e2d535195332ce499834af/overview",
+        "supportedInterfaces": [
+          {
+            "url": "https://minerva.ixo.world/a2a",
+            "protocolBinding": "JSONRPC",
+            "protocolVersion": "1.0"
+          }
+        ],
+        "provider": {
+          "organization": "IXO",
+          "url": "https://www.ixo.world"
+        },
+        "version": "1.0.0",
+        "capabilities": {
+          "streaming": true,
+          "pushNotifications": false,
+          "extendedAgentCard": false,
+          "extensions": [
+            {
+              "uri": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1",
+              "params": {
+                "capabilityPatterns": [
+                  {
+                    "skillId": "minerva.claim-routing",
+                    "can": [
+                      "claim/*",
+                      "bid/evaluate"
+                    ],
+                    "actionTypes": [
+                      "qi/claim.submit",
+                      "qi/bid.evaluate"
+                    ]
+                  }
+                ],
+                "identityBindings": {
+                  "did": "did:ixo:entity:3a734353c4e2d535195332ce499834af",
+                  "matrixUserId": "@minerva:ixo.world",
+                  "domainCardId": "did:ixo:entity:ixoworld#dmn"
+                },
+                "proofRefs": [
+                  "#proof-minerva-agent-card"
+                ],
+                "signatureRefs": [
+                  "#signature-minerva-agent-card"
+                ]
+              }
+            }
+          ]
+        },
+        "defaultInputModes": [
+          "application/json"
+        ],
+        "defaultOutputModes": [
+          "application/json"
+        ],
+        "skills": [
+          {
+            "id": "minerva.claim-routing",
+            "name": "Claim routing",
+            "description": "Routes submitted impact claims to eligible oracle evaluation flows.",
+            "tags": [
+              "claims",
+              "routing",
+              "oracle"
+            ]
+          }
+        ],
+        "signatures": [
+          {
+            "protected": "eyJhbGciOiJFZERTQSIsImtpZCI6ImRpZDppeG86ZW50aXR5OjNhNzM0MzUzYzRlMmQ1MzUxOTUzMzJjZTQ5OTgzNGFmI2tleS0xIn0",
+            "signature": "signature-minerva-agent-card"
+          }
+        ],
+        "iconUrl": "https://www.ixo.world/favicon.ico",
         "contactPoint": {
           "type": "schema:ContactPoint",
           "email": "TBD"
@@ -364,7 +447,79 @@
         "type": "ixo:AgentCard",
         "id": "did:ixo:entity:4f7934e46749ed7095490f1d29605fba",
         "name": "Offset Decision Oracle",
+        "description": "Oracle agent for evaluating offset-related bids and decision evidence.",
         "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:4f7934e46749ed7095490f1d29605fba/overview",
+        "supportedInterfaces": [
+          {
+            "url": "https://offset-decision.ixo.world/a2a",
+            "protocolBinding": "JSONRPC",
+            "protocolVersion": "1.0"
+          }
+        ],
+        "provider": {
+          "organization": "IXO",
+          "url": "https://www.ixo.world"
+        },
+        "version": "1.0.0",
+        "capabilities": {
+          "streaming": false,
+          "pushNotifications": false,
+          "extendedAgentCard": false,
+          "extensions": [
+            {
+              "uri": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1",
+              "params": {
+                "capabilityPatterns": [
+                  {
+                    "skillId": "offset-decision.bid-evaluation",
+                    "can": [
+                      "bid/evaluate"
+                    ],
+                    "actionTypes": [
+                      "qi/bid.evaluate"
+                    ]
+                  }
+                ],
+                "identityBindings": {
+                  "did": "did:ixo:entity:4f7934e46749ed7095490f1d29605fba",
+                  "matrixUserId": "@offset-decision-oracle:ixo.world",
+                  "domainCardId": "did:ixo:entity:ixoworld#dmn"
+                },
+                "proofRefs": [
+                  "#proof-offset-decision-agent-card"
+                ],
+                "signatureRefs": [
+                  "#signature-offset-decision-agent-card"
+                ]
+              }
+            }
+          ]
+        },
+        "defaultInputModes": [
+          "application/json"
+        ],
+        "defaultOutputModes": [
+          "application/json"
+        ],
+        "skills": [
+          {
+            "id": "offset-decision.bid-evaluation",
+            "name": "Bid evaluation",
+            "description": "Evaluates offset bid evidence against decision criteria.",
+            "tags": [
+              "offsets",
+              "bids",
+              "evaluation"
+            ]
+          }
+        ],
+        "signatures": [
+          {
+            "protected": "eyJhbGciOiJFZERTQSIsImtpZCI6ImRpZDppeG86ZW50aXR5OjRmNzkzNGU0Njc0OWVkNzA5NTQ5MGYxZDI5NjA1ZmJhI2tleS0xIn0",
+            "signature": "signature-offset-decision-agent-card"
+          }
+        ],
+        "iconUrl": "https://www.ixo.world/favicon.ico",
         "contactPoint": {
           "type": "schema:ContactPoint",
           "email": "TBD"
@@ -374,7 +529,79 @@
         "type": "ixo:AgentCard",
         "id": "did:ixo:entity:6cccd8461c06fa1319c66c1ac047f4ca",
         "name": "QI",
+        "description": "QI agent for submitting claims and coordinating flow-capability tasks.",
         "url": "https://impacts.exchange/marketplace/oracles/did:ixo:entity:6cccd8461c06fa1319c66c1ac047f4ca/overview",
+        "supportedInterfaces": [
+          {
+            "url": "https://qi.ixo.world/a2a",
+            "protocolBinding": "JSONRPC",
+            "protocolVersion": "1.0"
+          }
+        ],
+        "provider": {
+          "organization": "IXO",
+          "url": "https://www.ixo.world"
+        },
+        "version": "1.0.0",
+        "capabilities": {
+          "streaming": true,
+          "pushNotifications": true,
+          "extendedAgentCard": false,
+          "extensions": [
+            {
+              "uri": "https://w3id.org/ixo/a2a/extensions/flow-capabilities/v1",
+              "params": {
+                "capabilityPatterns": [
+                  {
+                    "skillId": "qi.claim-submit",
+                    "can": [
+                      "claim/*"
+                    ],
+                    "actionTypes": [
+                      "qi/claim.submit"
+                    ]
+                  }
+                ],
+                "identityBindings": {
+                  "did": "did:ixo:entity:6cccd8461c06fa1319c66c1ac047f4ca",
+                  "matrixUserId": "@qi:ixo.world",
+                  "domainCardId": "did:ixo:entity:ixoworld#dmn"
+                },
+                "proofRefs": [
+                  "#proof-qi-agent-card"
+                ],
+                "signatureRefs": [
+                  "#signature-qi-agent-card"
+                ]
+              }
+            }
+          ]
+        },
+        "defaultInputModes": [
+          "application/json"
+        ],
+        "defaultOutputModes": [
+          "application/json"
+        ],
+        "skills": [
+          {
+            "id": "qi.claim-submit",
+            "name": "Claim submission",
+            "description": "Submits IXO claims into QI flow actions.",
+            "tags": [
+              "qi",
+              "claims",
+              "flows"
+            ]
+          }
+        ],
+        "signatures": [
+          {
+            "protected": "eyJhbGciOiJFZERTQSIsImtpZCI6ImRpZDppeG86ZW50aXR5OjZjY2NkODQ2MWMwNmZhMTMxOWM2NmMxYWMwNDdmNGNhI2tleS0xIn0",
+            "signature": "signature-qi-agent-card"
+          }
+        ],
+        "iconUrl": "https://www.ixo.world/favicon.ico",
         "contactPoint": {
           "type": "schema:ContactPoint",
           "email": "TBD"
