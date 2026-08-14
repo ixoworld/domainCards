@@ -212,7 +212,7 @@
     "relatedDocument": [
       {
         "type": ["schema:DigitalDocument", "ixo:OpportunityDocument", "yoma:Opportunity"],
-        "id": "did:ixo:<<<Entity DID>>>?service=docs&relativeRef=/yoma/opportunity.jsonld",
+        "id": "https://<<<VFS host, e.g. testnet.vfs.ixo.earth>>>/public/id/<<<document uuid>>>",
         "description": "<<<Purpose, e.g. Additional opportunity information for mirroring on yoma.world>>>",
         "mediaType": "application/vc+ld+json"
       }
