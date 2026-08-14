@@ -3,8 +3,6 @@
     "https://www.w3.org/ns/credentials/v2",
     "https://w3id.org/ixo/context/v1",
     {
-      "attribute": "https://w3id.org/ixo/attributes/v1/",
-      "schema": "https://schema.org/",
       "ixo": "https://w3id.org/ixo/vocab/v1",
       "prov": "http://www.w3.org/ns/prov#",
       "proj": "https://linked.data.gov.au/def/project#",
@@ -20,6 +18,8 @@
       "skills": "ixo:skills",
       "signatures": "ixo:signatures",
       "iconUrl": "schema:thumbnailUrl",
+      "yoma": "https://w3id.org/yoma/vocab/v1/",
+      "relatedDocument": { "@id": "schema:subjectOf", "@container": "@set" },
       "@protected": true
     }
   ],
@@ -272,6 +272,14 @@
         "@id": "<<<Attribute uri>>>",
         "name": "<<<Attribute Name>>>",
         "value": "<<<Attribute Value>>>"
+      }
+    ],
+    "relatedDocument": [
+      {
+        "type": ["schema:DigitalDocument", "ixo:OpportunityDocument", "yoma:Opportunity"],
+        "id": "https://<<<VFS host, e.g. testnet.vfs.ixo.earth>>>/public/id/<<<document uuid>>>",
+        "description": "<<<Purpose, e.g. Additional opportunity information for mirroring on yoma.world>>>",
+        "mediaType": "application/vc+ld+json"
       }
     ],
     "project": {
